@@ -1,0 +1,170 @@
+<Schema name="Inventory Transferred">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Calendar">
+    <Hierarchy name="New Hierarchy 0" visible="true" hasAll="true">
+      <Table name="tbld_calendar" schema="public">
+      </Table>
+      <Level name="Years" visible="true" column="year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Months" visible="true" column="month_mm_mmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Date" visible="true" column="date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Product">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_sku" schema="public">
+      </Table>
+      <Level name="Brand" visible="true" column="brand" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku Macro Group" visible="true" column="sku_macro_group_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku Group Name" visible="true" column="sku_group_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku Code" visible="true" column="sku_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku" visible="true" column="sku_name" uniqueMembers="false">
+      </Level>
+      <Level name="Tally Code" visible="true" column="tally_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Lifting B2B" visible="true" column="unit_price_lifting_b2b" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Lifting MT" visible="true" column="unit_price_lifting_mt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Lifting GT" visible="true" column="unit_price_lifting_gt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Sales B2B" visible="true" column="unit_price_sales_b2b" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Sales MT" visible="true" column="unit_price_sales_mt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Sales GT" visible="true" column="unit_price_sales_gt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price MRP B2B" visible="true" column="unit_price_mrp_b2b" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price MRP MT" visible="true" column="unit_price_mrp_mt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price MRP GT" visible="true" column="unit_price_lifting_gt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Category" visible="true" column="category" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Ctn Size" visible="true" column="ctn_size" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="id" visible="true" column="sku_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="Inventory Transferred Direction" visible="true" cache="true" enabled="true">
+    <Table name="tagg_inventory_transferred_direction" schema="public" alias="">
+    </Table>
+    <DimensionUsage source="Calendar" name="Calendar" visible="true" foreignKey="date">
+    </DimensionUsage>
+    <DimensionUsage source="Product" name="Product" visible="true" foreignKey="sku_id">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" foreignKey="dbh_id_out" name="Distribution Out">
+      <Hierarchy visible="true" hasAll="true">
+        <Table name="vw_dbh_out" schema="public" alias="">
+        </Table>
+        <Level name="Region" visible="true" column="region" uniqueMembers="false">
+        </Level>
+        <Level name="RSM" visible="true" column="rsm" uniqueMembers="false">
+        </Level>
+        <Level name="Area" visible="true" column="area" uniqueMembers="false">
+        </Level>
+        <Level name="ASM" visible="true" column="asm" uniqueMembers="false">
+        </Level>
+        <Level name="Territory" visible="true" column="territory" uniqueMembers="false">
+        </Level>
+        <Level name="Teritory Officer" visible="true" column="territory_officer" uniqueMembers="false">
+        </Level>
+        <Level name="Distribution House" visible="true" column="dbh_name" uniqueMembers="false">
+        </Level>
+        <Level name="Distribution Code" visible="true" column="dbh_code" uniqueMembers="false">
+        </Level>
+        <Level name="Stock Distribution House" visible="true" column="stock_dbh_name" uniqueMembers="false">
+        </Level>
+        <Level name="Business Channel Type" visible="true" column="biz_channel_type" uniqueMembers="false">
+        </Level>
+        <Level name="Distribution Category" visible="true" column="db_category" uniqueMembers="false">
+        </Level>
+        <Level name="Credit Category" visible="true" column="credit_category" uniqueMembers="false">
+        </Level>
+        <Level name="Distribution Id" visible="false" column="dbh_id" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="dbh_id_in" name="Distribution In">
+      <Hierarchy visible="true" hasAll="true">
+        <Table name="vw_dbh_in" schema="public" alias="">
+        </Table>
+        <Level name="Region" visible="true" column="region" uniqueMembers="false">
+        </Level>
+        <Level name="RSM" visible="true" column="rsm" uniqueMembers="false">
+        </Level>
+        <Level name="Area" visible="true" column="area" uniqueMembers="false">
+        </Level>
+        <Level name="ASM" visible="true" column="asm" uniqueMembers="false">
+        </Level>
+        <Level name="Territory" visible="true" column="territory" uniqueMembers="false">
+        </Level>
+        <Level name="Territory Officer" visible="true" column="territory_officer" uniqueMembers="false">
+        </Level>
+        <Level name="Distribution House" visible="true" column="dbh_name" uniqueMembers="false">
+        </Level>
+        <Level name="Distribution Code" visible="true" column="dbh_code" uniqueMembers="false">
+        </Level>
+        <Level name="Stock Distribution Name" visible="true" column="stock_dbh_name" uniqueMembers="false">
+        </Level>
+        <Level name="Business Channel Type" visible="true" column="biz_channel_type" uniqueMembers="false">
+        </Level>
+        <Level name="Distribution Category" visible="true" column="db_category" uniqueMembers="false">
+        </Level>
+        <Level name="Credit Category" visible="true" column="credit_category" uniqueMembers="false">
+        </Level>
+        <Level name="id" visible="false" column="dbh_id" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="Out Amount" column="out_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Out Unit" column="out_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Out Ctn" column="out_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Out Volume" column="out_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="In Amount" column="in_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="In Unit" column="in_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="In Ctn" column="in_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="In Volume" column="in_volume" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+  <Cube name="Inventory Transferred" visible="true" cache="true" enabled="true">
+    <Table name="tagg_inventory_transfer" schema="public">
+    </Table>
+    <DimensionUsage source="Product" name="Product" visible="true" foreignKey="sku_id">
+    </DimensionUsage>
+    <DimensionUsage source="Calendar" name="Calendar" visible="true" foreignKey="date">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" foreignKey="inventory_id" name="Inventory Status">
+      <Hierarchy visible="true" hasAll="true">
+        <Table name="tbld_inventory_status" schema="public" alias="">
+        </Table>
+        <Level name="Status" visible="true" column="name" uniqueMembers="false">
+        </Level>
+        <Level name="id" visible="false" column="id" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="Amount" column="amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Unit" column="unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Ctn" column="ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Volume" column="volume" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+</Schema>

@@ -1,0 +1,82 @@
+<Schema name="New Schema8">
+  <Cube name="SR attendence" visible="true" cache="true" enabled="true">
+    <Table name="tbl_sr_attendence" schema="public" alias="">
+    </Table>
+    <Dimension type="StandardDimension" visible="true" foreignKey="date" name="Calendar">
+      <Hierarchy visible="true" hasAll="true">
+        <Table name="tbld_calendar" schema="public" alias="">
+        </Table>
+        <Level name="Years" visible="true" column="year" uniqueMembers="false">
+        </Level>
+        <Level name="Months" visible="true" column="month_mm_mmm" uniqueMembers="false">
+        </Level>
+        <Level name="Date" visible="true" column="date" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="dbh_id" name="Business Geo ">
+      <Hierarchy visible="true" hasAll="true">
+        <Table name="tbld_distribution_house" schema="public" alias="">
+        </Table>
+        <Level name="Region" visible="true" column="region" uniqueMembers="false">
+        </Level>
+        <Level name="RSM" visible="true" column="rsm" uniqueMembers="false">
+        </Level>
+        <Level name="Area" visible="true" column="area" uniqueMembers="false">
+        </Level>
+        <Level name="ASM" visible="true" column="asm" uniqueMembers="false">
+        </Level>
+        <Level name="Territory" visible="true" column="territory" uniqueMembers="false">
+        </Level>
+        <Level name="Territory Officer" visible="true" column="territory_officer" uniqueMembers="false">
+        </Level>
+        <Level name="Distribution Name" visible="true" column="dbh_name" uniqueMembers="false">
+        </Level>
+        <Level name="Stock Distribution Name" visible="true" column="stock_dbh_name" uniqueMembers="false">
+        </Level>
+        <Level name="Distribution Code" visible="true" column="dbh_code" uniqueMembers="false">
+        </Level>
+        <Level name="Dbh Id" visible="false" column="dbh_id" uniqueMembers="false">
+        </Level>
+        <Level name="Business Channel Type" visible="true" column="biz_channel_type" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="sr_id" name="Sales Representative">
+      <Hierarchy visible="true" hasAll="true">
+        <Table name="tbld_sr" schema="public" alias="">
+        </Table>
+        <Level name="SR Name" visible="true" column="sr_name" uniqueMembers="false">
+        </Level>
+        <Level name="SR Code" visible="true" column="sr_code" uniqueMembers="false">
+        </Level>
+        <Level name="SR id" visible="true" column="sr_id" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="login_status_id" name="Login Status">
+      <Hierarchy visible="true" hasAll="true">
+        <Table name="tbld_login_status" schema="public" alias="">
+        </Table>
+        <Level name="Login" visible="true" column="name" uniqueMembers="false">
+        </Level>
+        <Level name="Login if" visible="false" column="id" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="logout_status_id" name="Logout Status">
+      <Hierarchy visible="true" hasAll="true">
+        <Table name="tbld_logout_status" schema="public" alias="">
+        </Table>
+        <Level name="Logout" visible="true" column="name" uniqueMembers="false">
+        </Level>
+        <Level name="logout id" visible="false" column="id" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="This Month Working Days" column="this_month_working_days" aggregator="max" visible="true">
+    </Measure>
+    <Measure name="Present" column="is_present" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+</Schema>

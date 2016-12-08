@@ -1,0 +1,610 @@
+<Schema name="Daily Inventory Detail">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Calendar">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_calendar" schema="public">
+      </Table>
+      <Level name="Years" visible="true" column="year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Month(mmm)" visible="true" column="month_mm_mmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Month(mmmm)" visible="true" column="month_mm_mmmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Week of the Month" visible="true" column="week_of_the_year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Date" visible="true" column="date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Customized Calendar" visible="true" hasAll="true">
+      <Table name="tbld_calendar" schema="public">
+      </Table>
+      <Level name="Years" visible="true" column="year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Week of the Year" visible="true" column="week_of_the_month" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Date" visible="true" column="date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Customized Day" visible="true" hasAll="true">
+      <Table name="tbld_calendar" schema="public">
+      </Table>
+      <Level name="Year" visible="true" column="year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Month(mmm)" visible="true" column="month_mm_mmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Month(mmmm)" visible="true" column="month_mmmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Day(ddd)" visible="true" column="day_dd_ddd" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Day(dddd)" visible="true" column="day_dd_dddd" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Date" visible="false" column="date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Business Geo">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_distribution_house" schema="public">
+      </Table>
+      <Level name="Business Channel Type" visible="true" column="biz_channel_type" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Region" visible="true" column="region" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="RSM" visible="true" column="rsm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Area" visible="true" column="area" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="ASM" visible="true" column="asm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Territory" visible="true" column="territory" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Territory Officer" visible="true" column="territory_officer" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Distribution Name" visible="true" column="dbh_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Distribution Code" visible="true" column="dbh_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Distributor Name" visible="true" column="distributor_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Stock Distribution Name" visible="true" column="stock_dbh_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Distribution Category" visible="true" column="db_category" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Credit Category" visible="true" column="credit_category" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Dbh id" visible="false" column="dbh_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Product">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_sku" schema="public">
+      </Table>
+      <Level name="Brand" visible="true" column="brand" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku Macro Group" visible="true" column="sku_macro_group_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku Group" visible="true" column="sku_group_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku" visible="true" column="sku_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku Code" visible="true" column="sku_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Category" visible="true" column="category" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Ctn Size" visible="true" column="ctn_size" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Tally Code" visible="true" column="tally_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price MRP B2B" visible="true" column="unit_price_mrp_b2b" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Sales B2B" visible="true" column="unit_price_sales_b2b" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price MRP GT" visible="true" column="unit_price_mrp_gt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price MRP MT" visible="true" column="unit_price_mrp_mt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Sales GT" visible="true" column="unit_price_sales_gt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Sales MT" visible="true" column="unit_price_sales_mt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Lifting B2B" visible="true" column="unit_price_lifting_b2b" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Lifting MT" visible="true" column="unit_price_mrp_mt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Lifting GT" visible="true" column="unit_price_lifting_gt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku id" visible="false" column="sku_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Batch Calendar">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="vw_tbld_calendar_batch" schema="public">
+      </Table>
+      <Level name="Years" visible="true" column="year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Month(mmm)" visible="true" column="month_mm_mmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Month(mmmm)" visible="true" column="month_mm_mmmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Week of the month" visible="true" column="week_of_the_year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Date" visible="true" column="date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Customized Batch Calendar" visible="true" hasAll="true">
+      <Table name="vw_tbld_calendar_batch" schema="public">
+      </Table>
+      <Level name="Year" visible="true" column="year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Week of the Year" visible="true" column="week_of_the_month" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Date" visible="true" column="date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Customized Batch Day" visible="true" hasAll="true">
+      <Table name="tbld_calendar" schema="public" alias="">
+      </Table>
+      <Level name="Year" visible="true" column="year" uniqueMembers="false">
+      </Level>
+      <Level name="Month(mmm)" visible="true" column="month_mm_mmm" uniqueMembers="false">
+      </Level>
+      <Level name="Month(mmmm)" visible="true" column="month_mm_mmmm" uniqueMembers="false">
+      </Level>
+      <Level name="Day(ddd)" visible="true" column="day_dd_ddd" uniqueMembers="false">
+      </Level>
+      <Level name="Day(dddd)" visible="true" column="day_dd_dddd" uniqueMembers="false">
+      </Level>
+      <Level name="Date" visible="false" column="date" uniqueMembers="false">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="Daily Sound Inventory" visible="true" cache="true" enabled="true">
+    <Table name="tbl_daily_sound_inventory" schema="public">
+    </Table>
+    <DimensionUsage source="Calendar" name="Calendar" visible="true" foreignKey="date" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Product" name="Product" visible="true" foreignKey="sku_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Business Geo" name="Business Geo" visible="true" foreignKey="dbh_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Batch Calendar" name="Batch Calendar" visible="true" foreignKey="batch_date" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Day Opening Inventory Volume" column="day_closing_inventory_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Day Opening Inventory Unit" column="day_opening_inventory_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Day Opening Inventory Ctn" column="day_opening_inventory_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Day Opening Inventory Amount" column="day_opening_inventory_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Day Closing Inventory Volume" column="day_closing_inventory_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Day Closing Inventory Unit" column="day_closing_inventory_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Day Closing Inventory Ctn" column="day_closing_inventory_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Day Closing Inventory Amount" column="day_closing_inventory_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Opening Inventory Volume" column="month_opening_inventory_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Opening Inventory Unit" column="month_opening_inventory_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Opening Inventory Ctn" column="month_opening_inventory_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Opening Inventory Amount" column="month_opening_inventory_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Closing Inventory Volume" column="month_closing_inventory_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Closing Inventory Unit" column="month_closing_inventory_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Closing Inventory Ctn" column="month_closing_inventory_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Closing Inventory Amount" column="month_closing_inventory_amount" aggregator="sum" visible="true">
+    </Measure>
+    <CalculatedMember name="Day Opening Inventory MT" formula="[Measures],[Day Opening Inventory Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Day Closing Inventory MT" formula="[Measures].[Day Closing Inventory Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Monthly Opening Inventory MT" formula="[Measures].[Monthly Opening Inventory Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Monthly Closing Inventory MT" formula="[Measures].[Monthly Closing Inventory Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="Daily Transit Inventory" visible="true" cache="true" enabled="true">
+    <Table name="tbl_daily_transit_inventory" schema="public">
+    </Table>
+    <DimensionUsage source="Calendar" name="Calendar" visible="true" foreignKey="date" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Business Geo" name="Business Geo" visible="true" foreignKey="dbh_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Product" name="Product" visible="true" foreignKey="sku_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Batch Calendar" name="Batch Calendar" visible="true" foreignKey="batch_date" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Day Opening Transit Inventory Volume" column="day_opening_inventory_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Day Opening Transit Inventory Unit" column="day_opening_inventory_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Day Opening Transit Inventory Ctn" column="day_opening_inventory_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Day Opening Transit Inventory Amount" column="day_opening_inventory_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Day Closing Transit Inventory Volume" column="day_closing_inventory_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Day Closing Transit Inventory Unit" column="day_closing_inventory_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Day Closing Transit Inventory Ctn" column="day_closing_inventory_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Day Closing Transit Inventory Amount" column="day_closing_inventory_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Opening Transit Inventory Volume" column="month_opening_inventory_volume " aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Opening Transit Inventory Unit" column="month_opening_inventory_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Opening Transit Inventory Ctn" column="month_opening_inventory_ctn " aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Opening Transit Inventory Amount" column="month_opening_inventory_amount " aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Closing Transit Inventory Volume" column="month_closing_inventory_volume " aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Closing Transit Inventory Unit" column="month_closing_inventory_unit " aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Closing Transit Inventory Ctn" column="month_closing_inventory_ctn " aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Closing Transit Inventory Amount" column="day_closing_inventory_amount" aggregator="sum" visible="true">
+    </Measure>
+    <CalculatedMember name="Day Opening Transit Inventory MT" formula="[Measures].[Day Opening Transit Inventory Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Day Closing Transit Inventory MT" formula="[Measures].[Day Closing Transit Inventory Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Monthly Opening Transit Inventory MT" formula="[Measures].[Monthly Opening Transit Inventory Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Monthly Closing Transit Inventory MT" formula="[Measures].[Monthly Closing Transit Inventory Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="Daily Damage Inventory" visible="true" cache="true" enabled="true">
+    <Table name="tbl_daily_damage_inventory" schema="public">
+    </Table>
+    <DimensionUsage source="Calendar" name="Calendar" visible="true" foreignKey="date" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Business Geo" name="Business Geo" visible="true" foreignKey="dbh_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Product" name="Product" visible="true" foreignKey="sku_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Batch Calendar" name="Batch Calendar" visible="true" foreignKey="batch_date" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Day Opening Damage Inventory Volume" column="day_opening_inventory_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Day Opening Damage Inventory Unit" column="day_opening_inventory_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Day Opening Damage Inventory Ctn" column="day_opening_inventory_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Day Opening Damage Inventory Amount" column="day_opening_inventory_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Day Closing Damage Inventory Volume" column="day_closing_inventory_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Day Closing Damage Inventory Unit" column="day_closing_inventory_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Day Closing Damage Inventory Ctn" column="day_closing_inventory_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Day Closing Damage Inventory Amount" column="day_closing_inventory_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Opening Damage Inventory Volume" column="monthly_opening_inventory_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Opening Damage Inventory Unit" column="monthly_opening_inventory_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Opening Damage Inventory Ctn" column="monthly_opening_inventory_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Opening Damage Inventory Amount" column="monthly_opening_inventory_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Closing Damage Inventory Volume" column="monthly_closing_inventory_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Closing Damage Inventory Unit" column="monthly_closing_inventory_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Closing Damage Inventory Ctn" column="monthly_closing_inventory_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Closing Damage Inventory Amount" column="monthly_closing_inventory_amount" aggregator="sum" visible="true">
+    </Measure>
+    <CalculatedMember name="Day Opening Damage Inventory MT" formula="[Measures].[Day Opening Damage Inventory Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Day Closing Damage Inventory MT" formula="[Measures].[Day Closing Damage Inventory Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Monthly Opening Damage Inventory MT" formula="[Measures].[Monthly Opening Damage Inventory Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Monthly Closing Damage Inventory MT" formula="[Measures].[Monthly Closing Damage Inventory Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="Daily Primary Lifting" visible="false" cache="true" enabled="true">
+    <Table name="tagg_primary_daily_lifting" schema="public">
+    </Table>
+    <DimensionUsage source="Calendar" name="Calendar" visible="true" foreignKey="date" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Business Geo" name="Business Geo" visible="true" foreignKey="dbh_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Product" name="Product" visible="true" foreignKey="sku_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Batch Calendar" name="Batch Calendar" visible="true" foreignKey="batch_date" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="PR Lifting Volume" column="pr_lifting_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="PR Lifting Unit" column="pr_lifting_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="PR Lifting Ctn" column="pr_lifting_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="PR Lifting Amount" column="pr_lifting_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="PR Replacement Lifting Volume" column="pr_replacement_lifting_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="PR Replacement Lifting Unit" column="pr_replacement_lifting_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="PR Replacement Lifting Ctn" column="pr_replacement_lifting_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="PR Replacement Lifting Amount" column="pr_replacement_lifting_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="PR Free Lifting Volume" column="pr_free_lifting_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="PR Free Lifting Unit" column="pr_free_lifting_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="PR Free Lifting Ctn" column="pr_free_lifting_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="PR Free Lifting Amount" column="pr_free_lifting_amount" aggregator="sum" visible="true">
+    </Measure>
+    <CalculatedMember name="PR Lifting MT" formula="[Measures].[PR Lifting Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <VirtualCube enabled="true" name="SKU wise daily total stock" visible="true">
+    <VirtualCubeDimension visible="true" foreignKey="date" highCardinality="false" name="Calendar">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" foreignKey="dbh_id" highCardinality="false" name="Business Geo">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" foreignKey="sku_id" highCardinality="false" name="Product">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" foreignKey="batch_date" highCardinality="false" name="Batch Calendar">
+    </VirtualCubeDimension>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Day Opening Inventory Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Transit Inventory" name="[Measures].[Day Opening Transit Inventory Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Damage Inventory" name="[Measures].[Day Opening Damage Inventory Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Day Opening Inventory Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Transit Inventory" name="[Measures].[Day Opening Transit Inventory Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Damage Inventory" name="[Measures].[Day Opening Damage Inventory Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Day Opening Inventory Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Transit Inventory" name="[Measures].[Day Opening Transit Inventory Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Damage Inventory" name="[Measures].[Day Opening Damage Inventory Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Day Opening Inventory Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Transit Inventory" name="[Measures].[Day Opening Transit Inventory Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Damage Inventory" name="[Measures].[Day Opening Damage Inventory Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Day Closing Inventory Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Transit Inventory" name="[Measures].[Day Closing Transit Inventory Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Damage Inventory" name="[Measures].[Day Closing Damage Inventory Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Day Closing Inventory Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Transit Inventory" name="[Measures].[Day Closing Transit Inventory Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Damage Inventory" name="[Measures].[Day Closing Damage Inventory Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Day Closing Inventory Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Transit Inventory" name="[Measures].[Day Closing Transit Inventory Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Damage Inventory" name="[Measures].[Day Closing Damage Inventory Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Day Closing Inventory Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Transit Inventory" name="[Measures].[Day Closing Transit Inventory Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Damage Inventory" name="[Measures].[Day Closing Damage Inventory Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Monthly Opening Inventory Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Transit Inventory" name="[Measures].[Monthly Opening Transit Inventory Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Damage Inventory" name="[Measures].[Monthly Opening Damage Inventory Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Monthly Opening Inventory Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Transit Inventory" name="[Measures].[Monthly Opening Transit Inventory Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Damage Inventory" name="[Measures].[Monthly Opening Damage Inventory Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Monthly Opening Inventory Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Transit Inventory" name="[Measures].[Monthly Opening Transit Inventory Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Damage Inventory" name="[Measures].[Monthly Opening Damage Inventory Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Monthly Opening Inventory Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Transit Inventory" name="[Measures].[Monthly Opening Transit Inventory Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Damage Inventory" name="[Measures].[Monthly Opening Damage Inventory Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Monthly Closing Inventory Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Transit Inventory" name="[Measures].[Monthly Closing Transit Inventory Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Damage Inventory" name="[Measures].[Monthly Closing Damage Inventory Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Monthly Closing Inventory Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Damage Inventory" name="[Measures].[Monthly Closing Damage Inventory Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Transit Inventory" name="[Measures].[Monthly Closing Transit Inventory Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Monthly Closing Inventory Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Transit Inventory" name="[Measures].[Monthly Closing Transit Inventory Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Damage Inventory" name="[Measures].[Monthly Closing Damage Inventory Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Monthly Closing Inventory Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Transit Inventory" name="[Measures].[Monthly Closing Transit Inventory Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Damage Inventory" name="[Measures].[Monthly Closing Damage Inventory Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Day Opening Inventory MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Day Closing Inventory MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Monthly Opening Inventory MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Monthly Closing Inventory MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Transit Inventory" name="[Measures].[Day Opening Transit Inventory MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Transit Inventory" name="[Measures].[Day Closing Transit Inventory MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Transit Inventory" name="[Measures].[Monthly Opening Transit Inventory MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Transit Inventory" name="[Measures].[Monthly Closing Transit Inventory MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Damage Inventory" name="[Measures].[Day Opening Damage Inventory MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Damage Inventory" name="[Measures].[Day Closing Damage Inventory MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Damage Inventory" name="[Measures].[Monthly Opening Damage Inventory MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Damage Inventory" name="[Measures].[Monthly Closing Damage Inventory MT]" visible="true">
+    </VirtualCubeMeasure>
+    <CalculatedMember name="Total Daily Opening Stock Volume" formatString="#,#############" formula="([Measures].[Day Opening Inventory Volume]+[Measures].[Day Opening Transit Inventory Volume]+[Measures].[Day Opening Damage Inventory Volume])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Total Daily Opening Stock Unit" formatString="#,#############" formula="([Measures].[Day Opening Inventory Unit]+[Measures].[Day Opening Transit Inventory Unit]+[Measures].[Day Opening Damage Inventory Unit])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Total Daily Opening Stock Ctn" formatString="#,#############" formula="([Measures].[Day Opening Inventory Ctn]+[Measures].[Day Opening Transit Inventory Ctn]+[Measures].[Day Opening Damage Inventory Ctn])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Total Daily Stock Opening Amount " formatString="#,#############" formula="([Measures].[Day Opening Inventory Amount]+[Measures].[Day Opening Transit Inventory Amount]+[Measures].[Day Opening Damage Inventory Amount])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Total Daily Stock Closing Volume" formatString="#,#############" formula="([Measures].[Day Closing Inventory Volume]+[Measures].[Day Closing Transit Inventory Volume]+[Measures].[Day Closing Damage Inventory Volume])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Total Daily Stock Closing Unit" formatString="#,#############" formula="([Measures].[Day Closing Inventory Unit]+[Measures].[Day Closing Transit Inventory Unit]+[Measures].[Day Closing Damage Inventory Unit])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Total Daily Stock Closing Ctn" formatString="#,#############" formula="([Measures].[Day Closing Inventory Ctn]+[Measures].[Day Closing Transit Inventory Ctn]+[Measures].[Day Closing Damage Inventory Ctn])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Total Daily Stock Closing Amount" formatString="#,#############" formula="([Measures].[Day Closing Inventory Amount]+[Measures].[Day Closing Transit Inventory Amount]+[Measures].[Day Closing Damage Inventory Amount])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Total Monthly Opening Stock Volume" formatString="#,#############" formula="([Measures].[Monthly Opening Inventory Volume]+[Measures].[Monthly Opening Transit Inventory Volume]+[Measures].[Monthly Opening Damage Inventory Volume])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Total Monthly Opening Stock Unit" formatString="#,#############" formula="([Measures].[Monthly Opening Inventory Unit]+[Measures].[Monthly Opening Transit Inventory Unit]+[Measures].[Monthly Opening Damage Inventory Unit])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Total Monthly Opening Stock Ctn" formatString="#,#############" formula="([Measures].[Monthly Opening Inventory Ctn]+[Measures].[Monthly Opening Transit Inventory Ctn]+[Measures].[Monthly Opening Damage Inventory Ctn])" dimension="Measures" visible="false">
+    </CalculatedMember>
+    <CalculatedMember name="Total Monthly Closing Stock Volume" formatString="#,#############" formula="([Measures].[Monthly Closing Inventory Volume]+[Measures].[Monthly Closing Transit Inventory Volume]+[Measures].[Monthly Closing Damage Inventory Volume])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Total Monthly Closing Stock Unit" formatString="#,#############" formula="([Measures].[Monthly Closing Inventory Unit]+[Measures].[Monthly Closing Damage Inventory Unit]+[Measures].[Monthly Closing Transit Inventory Unit])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Total Monthly Closing Stock Ctn" formatString="#,#############" formula="([Measures].[Monthly Closing Inventory Ctn]+[Measures].[Monthly Closing Transit Inventory Ctn]+[Measures].[Monthly Closing Damage Inventory Ctn])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Total Monthly Opening Stock Amount" formatString="#,#############" formula="([Measures].[Monthly Opening Inventory Amount]+[Measures].[Monthly Opening Transit Inventory Amount]+[Measures].[Monthly Opening Damage Inventory Amount])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Total Monthly Closing Stock Amount" formatString="#,#############" formula="([Measures].[Monthly Closing Inventory Amount]+[Measures].[Monthly Closing Transit Inventory Amount]+[Measures].[Monthly Closing Damage Inventory Amount])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Total Daily Opening Stock MT" formula="([Measures].[Day Opening Inventory MT]+[Measures].[Day Opening Transit Inventory MT]+[Measures].[Day Opening Damage Inventory MT])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Total Daily Stock Closing MT" formula="([Measures].[Day Closing Inventory MT]+[Measures].[Day Closing Transit Inventory MT]+[Measures].[Day Closing Damage Inventory MT])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Total Monthly Opening Stock MT" formula="([Measures].[Monthly Opening Inventory MT]+[Measures].[Monthly Opening Transit Inventory MT]+[Measures].[Monthly Opening Damage Inventory MT])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Total Monthly Closing Stock MT" formula="([Measures].[Monthly Closing Inventory MT]+[Measures].[Monthly Closing Transit Inventory MT]+[Measures].[Monthly Closing Damage Inventory MT])" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </VirtualCube>
+  <VirtualCube enabled="true" name="Daily Primary Stock Detail" visible="true">
+    <VirtualCubeDimension visible="true" foreignKey="date" highCardinality="false" name="Calendar">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" foreignKey="dbh_id" highCardinality="false" name="Business Geo">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" foreignKey="sku_id" highCardinality="false" name="Product">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" foreignKey="batch_date" highCardinality="false" name="Batch Calendar">
+    </VirtualCubeDimension>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Day Opening Inventory Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Day Opening Inventory Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Day Opening Inventory Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Day Opening Inventory Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Day Closing Inventory Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Day Closing Inventory Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Day Closing Inventory Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Day Closing Inventory Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Monthly Opening Inventory Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Monthly Opening Inventory Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Monthly Opening Inventory Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Monthly Opening Inventory Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Monthly Closing Inventory Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Monthly Closing Inventory Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Monthly Closing Inventory Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Monthly Closing Inventory Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Primary Lifting" name="[Measures].[PR Lifting Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Primary Lifting" name="[Measures].[PR Lifting Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Primary Lifting" name="[Measures].[PR Lifting Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Primary Lifting" name="[Measures].[PR Lifting Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Primary Lifting" name="[Measures].[PR Replacement Lifting Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Primary Lifting" name="[Measures].[PR Replacement Lifting Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Primary Lifting" name="[Measures].[PR Replacement Lifting Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Primary Lifting" name="[Measures].[PR Replacement Lifting Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Primary Lifting" name="[Measures].[PR Free Lifting Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Primary Lifting" name="[Measures].[PR Free Lifting Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Primary Lifting" name="[Measures].[PR Free Lifting Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Primary Lifting" name="[Measures].[PR Free Lifting Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Day Opening Inventory MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Day Closing Inventory MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Monthly Opening Inventory MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Sound Inventory" name="[Measures].[Monthly Closing Inventory MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Primary Lifting" name="[Measures].[PR Lifting MT]" visible="true">
+    </VirtualCubeMeasure>
+  </VirtualCube>
+  <Role name="Sales User">
+    <SchemaGrant access="none">
+    </SchemaGrant>
+  </Role>
+  <Role name="Administrator">
+    <SchemaGrant access="all">
+    </SchemaGrant>
+  </Role>
+</Schema>

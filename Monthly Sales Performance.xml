@@ -1,0 +1,424 @@
+<Schema name="Monthly Performance">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Calendar">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_calendar_month" schema="public">
+      </Table>
+      <Level name="Years" visible="true" column="year_yyy" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Month(mmm)" visible="true" column="month_mm_mmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Month(mmmm)" visible="true" column="month_mm_mmmm" uniqueMembers="false">
+      </Level>
+      <Level name="Start Date" visible="true" column="start_date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="End Date" visible="true" column="end_date" uniqueMembers="false">
+      </Level>
+      <Level name="month_id" visible="false" column="month_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Business Geo">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_distribution_house" schema="public">
+      </Table>
+      <Level name="Business Channel" visible="true" column="biz_channel_type" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Region" visible="true" column="region" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="RSM" visible="true" column="rsm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Area" visible="true" column="area" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="ASM" visible="true" column="asm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Territory" visible="true" column="territory" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Territory Officer" visible="true" column="territory_officer" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Distribution Name" visible="true" column="dbh_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Distribution Code" visible="true" column="dbh_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Distributor Name" visible="true" column="distributor_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Distribution Category" visible="true" column="db_category" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Stock Distribution Name" visible="true" column="stock_dbh_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Credit Limit Category" visible="true" column="credit_category" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Dbh id" visible="false" column="dbh_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Product">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_sku" schema="public">
+      </Table>
+      <Level name="Brand" visible="true" column="brand" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku Macro Group" visible="true" column="sku_group_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku Group" visible="true" column="sku_group_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku Name" visible="true" column="sku_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku Code" visible="true" column="sku_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Ctn Size" visible="true" column="ctn_size" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Category" visible="true" column="category" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Tally Code" visible="true" column="tally_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price MRP B2B" visible="true" column="unit_price_mrp_b2b" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price MRP MT" visible="true" column="unit_price_mrp_mt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price MRP GT" visible="true" column="unit_price_mrp_gt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Sales GT" visible="true" column="unit_price_sales_gt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Sales B2B" visible="true" column="unit_price_sales_b2b" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Sales MT" visible="true" column="unit_price_sales_mt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Lifting B2B" visible="true" column="unit_price_lifting_b2b" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Lifting GT" visible="true" column="unit_price_lifting_gt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Lifting MT" visible="true" column="unit_price_lifting_mt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku id" visible="false" column="sku_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="Monthly PR Sales DBH SKU wise" visible="true" cache="true" enabled="true">
+    <Table name="tagg_monthly_pr_sales" schema="public">
+    </Table>
+    <DimensionUsage source="Calendar" name="Calendar" visible="true" foreignKey="month_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Business Geo" name="Business Geo" visible="true" foreignKey="dbh_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Product" name="Product" visible="true" foreignKey="sku_id" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="PR Sales Volume" column="pr_sales_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="PR Sales Unit" column="pr_sales_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="PR Sales CTN" column="pr_sales_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="PR Sales Amount" column="pr_sales_amount" aggregator="sum" visible="true">
+    </Measure>
+    <CalculatedMember name="PR Sales Volume gr%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[PR Sales Volume])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[PR Sales Volume])),0.0,(([Calendar].CURRENTMEMBER,Measures.[PR Sales Volume])-([Calendar].PrevMember,Measures.[PR Sales Volume]))/([Calendar].PrevMember,Measures.[PR Sales Volume]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="PR Sales Unit gr%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[PR Sales Unit])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[PR Sales Unit])),0.0,(([Calendar].CURRENTMEMBER,Measures.[PR Sales Unit])-([Calendar].PrevMember,Measures.[PR Sales Unit]))/([Calendar].PrevMember,Measures.[PR Sales Unit]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="PR Sales CTN gr%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[PR Sales CTN])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[PR Sales CTN])),0.0,(([Calendar].CURRENTMEMBER,Measures.[PR Sales CTN])-([Calendar].PrevMember,Measures.[PR Sales CTN]))/([Calendar].PrevMember,Measures.[PR Sales CTN]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="PR Sales Amount gr%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[PR Sales Amount])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[PR Sales Amount])),0.0,(([Calendar].CURRENTMEMBER,Measures.[PR Sales Amount])-([Calendar].PrevMember,Measures.[PR Sales Amount]))/([Calendar].PrevMember,Measures.[PR Sales Amount]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="PR Sales MT" formula="[Measures].[PR Sales Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="PR Sales MT gr%" formatString="#.####%" formula="Iif(([Calendar].PrevMember,Measures.[PR Sales MT])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[PR Sales MT])),0.0,(([Calendar].CURRENTMEMBER,Measures.[PR Sales MT])-([Calendar].PrevMember,Measures.[PR Sales MT]))/([Calendar].PrevMember,Measures.[PR Sales MT]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="Monthly SE Sales DBH SKU wise " visible="true" cache="true" enabled="true">
+    <Table name="tagg_monthly_se_sales" schema="public">
+    </Table>
+    <DimensionUsage source="Calendar" name="Calendar" visible="true" foreignKey="month_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Product" name="Product" visible="true" foreignKey="sku_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Business Geo" name="Business Geo" visible="true" foreignKey="dbh_id" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Net Secondary Sales Volume" column="se_net_sales_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Net Secondary Sales Unit" column="se_net_sales_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Net Secondary Sales CTN" column="se_net_sales_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Net Secondary Sales Amount" column="se_net_sales_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Free Secondary Sales Volume" column="se_free_sales_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Free Secondary Sales Unit" column="se_free_sales_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Free Secondary Sales CTN" column="se_free_sales_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Free Secondary Sales Amount" column="se_free_sales_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Gross Secondary Sales Volume" column="se_gross_sales_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Gross Secondary Sales Unit" column="se_gross_sales_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Gross Secondary Sales CTN" column="se_gross_sales_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Gross Secondary Sales Amount" column="se_gross_sales_amount" aggregator="sum" visible="true">
+    </Measure>
+    <CalculatedMember name="Net Secondary Sales Volume GR%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Net Secondary Sales Volume])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Net Secondary Sales Volume])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Net Secondary Sales Volume])-([Calendar].PrevMember,Measures.[Net Secondary Sales Volume]))/([Calendar].PrevMember,Measures.[Net Secondary Sales Volume]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Net Secondary Sales Unit GR%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Net Secondary Sales Unit])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Net Secondary Sales Unit])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Net Secondary Sales Unit])-([Calendar].PrevMember,Measures.[Net Secondary Sales Unit]))/([Calendar].PrevMember,Measures.[Net Secondary Sales Unit]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Net Secondary Sales CTN GR%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Net Secondary Sales CTN])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Net Secondary Sales CTN])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Net Secondary Sales CTN])-([Calendar].PrevMember,Measures.[Net Secondary Sales CTN]))/([Calendar].PrevMember,Measures.[Net Secondary Sales CTN]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Net Secondary Sales Amount GR%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Net Secondary Sales Amount])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Net Secondary Sales Amount])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Net Secondary Sales Amount])-([Calendar].PrevMember,Measures.[Net Secondary Sales Amount]))/([Calendar].PrevMember,Measures.[Net Secondary Sales Amount]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Free Secondary Sales Volume GR%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Free Secondary Sales Volume])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Free Secondary Sales Volume])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Free Secondary Sales Volume])-([Calendar].PrevMember,Measures.[Free Secondary Sales Volume]))/([Calendar].PrevMember,Measures.[Free Secondary Sales Volume]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Free Secondary Sales Unit GR%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Free Secondary Sales Unit])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Free Secondary Sales Unit])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Free Secondary Sales Unit])-([Calendar].PrevMember,Measures.[Free Secondary Sales Unit]))/([Calendar].PrevMember,Measures.[Free Secondary Sales Unit]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Free Secondary Sales CTN GR%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Free Secondary Sales CTN])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Free Secondary Sales CTN])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Free Secondary Sales CTN])-([Calendar].PrevMember,Measures.[Free Secondary Sales CTN]))/([Calendar].PrevMember,Measures.[Free Secondary Sales CTN]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Free Secondary Sales Amount GR%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Free Secondary Sales Amount])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Free Secondary Sales Amount])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Free Secondary Sales Amount])-([Calendar].PrevMember,Measures.[Free Secondary Sales Amount]))/([Calendar].PrevMember,Measures.[Free Secondary Sales Amount]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Gross Secondary Sales Volume GR%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Gross Secondary Sales Volume])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Gross Secondary Sales Volume])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Gross Secondary Sales Volume])-([Calendar].PrevMember,Measures.[Gross Secondary Sales Volume]))/([Calendar].PrevMember,Measures.[Gross Secondary Sales Volume]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Gross Secondary Sales Unit GR%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Gross Secondary Sales Unit])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Gross Secondary Sales Unit])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Gross Secondary Sales Unit])-([Calendar].PrevMember,Measures.[Gross Secondary Sales Unit]))/([Calendar].PrevMember,Measures.[Gross Secondary Sales Unit]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Gross Secondary Sales CTN GR%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Gross Secondary Sales CTN])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Gross Secondary Sales CTN])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Gross Secondary Sales CTN])-([Calendar].PrevMember,Measures.[Gross Secondary Sales CTN]))/([Calendar].PrevMember,Measures.[Gross Secondary Sales CTN]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Gross Secondary Sales Amount GR%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Gross Secondary Sales Amount])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Gross Secondary Sales Amount])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Gross Secondary Sales Amount])-([Calendar].PrevMember,Measures.[Gross Secondary Sales Amount]))/([Calendar].PrevMember,Measures.[Gross Secondary Sales Amount]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Net Secondary Sales MT" formula="[Measures].[Net Secondary Sales Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Free Secondary Sales MT" formula="[Measures].[Free Secondary Sales Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Gross Secondary Sales MT" formula="[Measures].[Gross Secondary Sales Volume]/10000" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Net Secondary Sales MT%" formatString="#.####%" formula="Iif(([Calendar].PrevMember,Measures.[Net Secondary Sales MT])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Net Secondary Sales MT])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Net Secondary Sales MT])-([Calendar].PrevMember,Measures.[Net Secondary Sales MT]))/([Calendar].PrevMember,Measures.[Net Secondary Sales MT]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Gross Secondary Sales MT%" formatString="#.####%" formula="Iif(([Calendar].PrevMember,Measures.[Gross Secondary Sales MT])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Gross Secondary Sales MT])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Gross Secondary Sales MT])-([Calendar].PrevMember,Measures.[Gross Secondary Sales MT]))/([Calendar].PrevMember,Measures.[Gross Secondary Sales MT]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Free Secondary Sales MT%" formatString="#.####%" formula="Iif(([Calendar].PrevMember,Measures.[Free Secondary Sales MT])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Free Secondary Sales MT])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Free Secondary Sales MT])-([Calendar].PrevMember,Measures.[Free Secondary Sales MT]))/([Calendar].PrevMember,Measures.[Free Secondary Sales MT]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="Monthly Target Sales DBH SKU wise " visible="true" cache="true" enabled="true">
+    <Table name="tagg_monthly_target" schema="public">
+    </Table>
+    <DimensionUsage source="Calendar" name="Calendar" visible="true" foreignKey="month_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Product" name="Product" visible="true" foreignKey="sku_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Business Geo" name="Business Geo" visible="true" foreignKey="dbh_id" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Target Volume" column="target_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Target Unit" column="target_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Target CTN" column="target_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Target Amount" column="target_amount" aggregator="sum" visible="true">
+    </Measure>
+    <CalculatedMember name="Target MT" formula="[Measures].[Target Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="Monthly Sound Inventory " visible="true" cache="true" enabled="true">
+    <Table name="tbl_monthly_sound_inventory" schema="public">
+    </Table>
+    <DimensionUsage source="Calendar" name="Calendar" visible="true" foreignKey="month_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Product" name="Product" visible="true" foreignKey="sku_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Business Geo" name="Business Geo" visible="true" foreignKey="dbh_id" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" foreignKey="batch_month" highCardinality="false" name="Batch Month">
+      <Hierarchy visible="true" hasAll="true">
+        <Table name="vw_tbld_calendar_month" schema="public">
+        </Table>
+        <Level name="Years" visible="true" column="year_yyy" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Months" visible="true" column="month_mm_mmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Month id" visible="false" column="month_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="Opening Inventory Volume" column="opening_inventory_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Opening Inventory CTN" column="opening_inventory_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Opening Inventory Unit" column="opening_inventory_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Opening Inventory Amount" column="opening_inventory_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Closing Inventory Volume" column="closing_inventory_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Closing Inventory CTN" column="closing_inventory_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Closing Inventory Unit" column="closing_inventory_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Closing Inventory Amount" column="closing_inventory_amount" aggregator="sum" visible="true">
+    </Measure>
+    <CalculatedMember name="Opening Inventory Volume GR%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Opening Inventory Volume])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Opening Inventory Volume])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Opening Inventory Volume])-([Calendar].PrevMember,Measures.[Opening Inventory Volume]))/([Calendar].PrevMember,Measures.[Opening Inventory Volume]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Opening Inventory CTN GR%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Opening Inventory CTN])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Opening Inventory CTN])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Opening Inventory CTN])-([Calendar].PrevMember,Measures.[Opening Inventory CTN]))/([Calendar].PrevMember,Measures.[Opening Inventory CTN]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Opening Inventory Unit GR%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Opening Inventory Unit])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Opening Inventory Unit])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Opening Inventory Unit])-([Calendar].PrevMember,Measures.[Opening Inventory Unit]))/([Calendar].PrevMember,Measures.[Opening Inventory Unit]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Opening Inventory Amount GR%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Opening Inventory Amount])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Opening Inventory Amount])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Opening Inventory Amount])-([Calendar].PrevMember,Measures.[Opening Inventory Amount]))/([Calendar].PrevMember,Measures.[Opening Inventory Amount]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Closing Inventory Volume GR%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Closing Inventory Volume])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Closing Inventory Volume])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Closing Inventory Volume])-([Calendar].PrevMember,Measures.[Closing Inventory Volume]))/([Calendar].PrevMember,Measures.[Closing Inventory Volume]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Closing Inventory CTN GR%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Closing Inventory CTN])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Closing Inventory CTN])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Closing Inventory CTN])-([Calendar].PrevMember,Measures.[Closing Inventory CTN]))/([Calendar].PrevMember,Measures.[Closing Inventory CTN]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Closing Inventory Unit GR%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Closing Inventory Unit])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Closing Inventory Unit])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Closing Inventory Unit])-([Calendar].PrevMember,Measures.[Closing Inventory Unit]))/([Calendar].PrevMember,Measures.[Closing Inventory Unit]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Closing Inventory Amount GR%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Closing Inventory Amount])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Closing Inventory Amount])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Closing Inventory Amount])-([Calendar].PrevMember,Measures.[Closing Inventory Amount]))/([Calendar].PrevMember,Measures.[Closing Inventory Amount]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Opening Inventory MT" formula="[Measures].[Opening Inventory Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Closing Inventory MT" formula="[Measures].[Closing Inventory Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Opening Inventory MT%" formatString="#.####%" formula="Iif(([Calendar].PrevMember,Measures.[Opening Inventory MT])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Opening Inventory MT])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Opening Inventory MT])-([Calendar].PrevMember,Measures.[Opening Inventory MT]))/([Calendar].PrevMember,Measures.[Opening Inventory MT]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Closing Inventory MT%" formatString="#.####%" formula="Iif(([Calendar].PrevMember,Measures.[Closing Inventory MT])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Closing Inventory MT])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Closing Inventory MT])-([Calendar].PrevMember,Measures.[Closing Inventory MT]))/([Calendar].PrevMember,Measures.[Closing Inventory MT]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <VirtualCube enabled="true" name="Monthly Sales Performance " visible="true">
+    <VirtualCubeDimension visible="true" foreignKey="month_id" highCardinality="false" name="Calendar">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" foreignKey="dbh_id" highCardinality="false" name="Business Geo">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" foreignKey="sku_id" highCardinality="false" name="Product">
+    </VirtualCubeDimension>
+    <VirtualCubeMeasure cubeName="Monthly PR Sales DBH SKU wise" name="[Measures].[PR Sales Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly PR Sales DBH SKU wise" name="[Measures].[PR Sales Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly PR Sales DBH SKU wise" name="[Measures].[PR Sales CTN]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly PR Sales DBH SKU wise" name="[Measures].[PR Sales Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly PR Sales DBH SKU wise" name="[Measures].[PR Sales MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly PR Sales DBH SKU wise" name="[Measures].[PR Sales MT gr%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly PR Sales DBH SKU wise" name="[Measures].[PR Sales Volume gr%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly PR Sales DBH SKU wise" name="[Measures].[PR Sales CTN gr%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly PR Sales DBH SKU wise" name="[Measures].[PR Sales Unit gr%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly PR Sales DBH SKU wise" name="[Measures].[PR Sales Amount gr%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Net Secondary Sales Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Net Secondary Sales Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Net Secondary Sales CTN]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Net Secondary Sales Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Free Secondary Sales Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Free Secondary Sales Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Free Secondary Sales CTN]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Free Secondary Sales Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Gross Secondary Sales Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Gross Secondary Sales Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Gross Secondary Sales Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Net Secondary Sales Volume GR%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Net Secondary Sales Unit GR%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Net Secondary Sales Amount GR%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Free Secondary Sales Volume GR%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Free Secondary Sales CTN GR%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Free Secondary Sales Unit GR%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Free Secondary Sales Amount GR%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Gross Secondary Sales Volume GR%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Gross Secondary Sales Unit GR%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Gross Secondary Sales CTN GR%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Gross Secondary Sales Amount GR%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Net Secondary Sales MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Free Secondary Sales MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Gross Secondary Sales MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Net Secondary Sales MT%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Free Secondary Sales MT%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly SE Sales DBH SKU wise " name="[Measures].[Gross Secondary Sales MT%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly Target Sales DBH SKU wise " name="[Measures].[Target Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly Target Sales DBH SKU wise " name="[Measures].[Target Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly Target Sales DBH SKU wise " name="[Measures].[Target Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly Target Sales DBH SKU wise " name="[Measures].[Target CTN]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly Target Sales DBH SKU wise " name="[Measures].[Target MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly Sound Inventory " name="[Measures].[Opening Inventory Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly Sound Inventory " name="[Measures].[Opening Inventory CTN]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly Sound Inventory " name="[Measures].[Opening Inventory Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly Sound Inventory " name="[Measures].[Opening Inventory Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly Sound Inventory " name="[Measures].[Closing Inventory Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly Sound Inventory " name="[Measures].[Closing Inventory CTN]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly Sound Inventory " name="[Measures].[Closing Inventory Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly Sound Inventory " name="[Measures].[Closing Inventory Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly Sound Inventory " name="[Measures].[Opening Inventory Volume GR%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly Sound Inventory " name="[Measures].[Opening Inventory CTN GR%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly Sound Inventory " name="[Measures].[Opening Inventory Unit GR%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly Sound Inventory " name="[Measures].[Opening Inventory Amount GR%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly Sound Inventory " name="[Measures].[Closing Inventory Volume GR%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly Sound Inventory " name="[Measures].[Closing Inventory CTN GR%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly Sound Inventory " name="[Measures].[Closing Inventory Unit GR%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly Sound Inventory " name="[Measures].[Closing Inventory Amount GR%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly Sound Inventory " name="[Measures].[Opening Inventory MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly Sound Inventory " name="[Measures].[Closing Inventory MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly Sound Inventory " name="[Measures].[Opening Inventory MT%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Monthly Sound Inventory " name="[Measures].[Closing Inventory MT%]" visible="true">
+    </VirtualCubeMeasure>
+    <CalculatedMember name="SE Volume Achievement" formula="[Measures].[Gross Secondary Sales Volume]/[Measures].[Target Volume]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="SE MT Achievement" formula="[Measures].[Gross Secondary Sales MT]/[Measures].[Target MT]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="SE  Amount Achievement" formula="[Measures].[Gross Secondary Sales Amount]/[Measures].[Target Amount]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="PR Volume  Achievement" formula="[Measures].[PR Sales Volume]/[Measures].[Target Volume]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="PR MT  Achievement" formula="[Measures].[PR Sales MT]/[Measures].[Target MT]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="PR Amount  Achievement" formula="[Measures].[PR Sales Amount]/[Measures].[Target Amount]" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </VirtualCube>
+</Schema>

@@ -1,0 +1,210 @@
+<Schema name="Stock Detail">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Calendar">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_calendar" schema="public">
+      </Table>
+      <Level name="Years" visible="true" column="year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Months" visible="true" column="month_mm_mmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Date" visible="true" column="date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Business Geo">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_distribution_house" schema="public">
+      </Table>
+      <Level name="Region" visible="true" column="region" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="RSM" visible="true" column="rsm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Area" visible="true" column="area" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="ASM" visible="true" column="asm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Territory" visible="true" column="territory" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Territory Officer" visible="true" column="territory_officer" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Distribution Name" visible="true" column="dbh_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Distribution Code" visible="true" column="dbh_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Stock Distribution Name" visible="true" column="stock_dbh_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="DBH id" visible="false" column="dbh_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Product">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_sku" schema="public">
+      </Table>
+      <Level name="Brand" visible="true" column="brand" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku Macro Group" visible="true" column="sku_macro_group_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku Group" visible="true" column="sku_group_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku" visible="true" column="sku_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Category" visible="true" column="category" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Ctn Size" visible="false" column="ctn_size" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Tally Code" visible="true" column="tally_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price MRP B2B" visible="true" column="unit_price_mrp_b2b" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price MRP GT" visible="true" column="unit_price_lifting_gt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price MRP MT" visible="true" column="unit_price_mrp_mt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Sales B2B" visible="true" column="unit_price_sales_b2b" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Sales GT" visible="true" column="unit_price_lifting_gt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Sales MT" visible="true" column="unit_price_sales_mt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Lifting B2B" visible="true" column="unit_price_lifting_b2b" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Lifting GT" visible="true" column="unit_price_lifting_gt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Lifting MT" visible="true" column="unit_price_lifting_mt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku id" visible="false" column="sku_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Sales Representative">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_sr" schema="public">
+      </Table>
+      <Level name="SR name" visible="true" column="sr_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="SR Code" visible="true" column="sr_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="SR id" visible="false" column="sr_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Route">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_route" schema="public">
+      </Table>
+      <Level name="Route Name" visible="true" column="route_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Route Code" visible="true" column="route_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Route Id" visible="false" column="route_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Outlet">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_outlet" schema="public">
+      </Table>
+      <Level name="Outlet Name" visible="true" column="outlet_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Outlet Code" visible="true" column="outlet_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Address" visible="true" column="address" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Outlet Category" visible="true" column="outlet_category" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Volume Class" visible="true" column="volume_class" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Outlet id" visible="true" column="outlet_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Section">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_section" schema="public">
+      </Table>
+      <Level name="Section" visible="true" column="section_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Section Class" visible="true" column="section_class" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Section Type" visible="true" column="section_type" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Section Code" visible="true" column="section_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Section id" visible="true" column="section_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Cluster">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_cluster" schema="public">
+      </Table>
+      <Level name="Cluster Name" visible="true" column="cluster_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Cluster Code" visible="true" column="cluster_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Cluster id" visible="false" column="cluster_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="Market Stock" visible="true" cache="true" enabled="true">
+    <Table name="tbl_market_stock" schema="public">
+    </Table>
+    <DimensionUsage source="Calendar" name="Calendar" visible="true" foreignKey="date" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Business Geo" name="Business Geo" visible="true" foreignKey="dbh_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Product" name="Product" visible="true" foreignKey="section_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Sales Representative" name="Sales Representative" visible="true" foreignKey="sr_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Route" name="Route" visible="true" foreignKey="route_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Section" name="Section" visible="true" foreignKey="section_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Cluster" name="Cluster " visible="true" foreignKey="cluster_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Outlet" name="Outlet" visible="true" foreignKey="outlet_id" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Stock Unit" column="stock_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Stock Ctn" column="stock_ctn" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+  <Cube name="Competition Market Stock" visible="true" cache="true" enabled="true">
+    <Table name="tbl_competition_stock" schema="public">
+    </Table>
+    <DimensionUsage source="Calendar" name="Calendar" visible="true" foreignKey="date" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Business Geo" name="Business Geo" visible="true" foreignKey="dbh_id" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" foreignKey="competition_sku_id" highCardinality="false" name="Competition Sku">
+      <Hierarchy visible="true" hasAll="true">
+        <Table name="tbld_competition_sku" schema="public">
+        </Table>
+        <Level name="Competition Sku" visible="true" column="competition_sku_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Company" visible="true" column="company_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Unit Price MRP" visible="true" column="unit_price_mrp" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Competition Sku id" visible="true" column="competition_sku_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <DimensionUsage source="Sales Representative" name="Sales Representative" visible="true" foreignKey="sr_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Route" name="Route" visible="true" foreignKey="route_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Outlet" name="Outlet" visible="true" foreignKey="outlet_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Section" name="Section" visible="true" foreignKey="section_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Cluster" name="Cluster" visible="true" foreignKey="cluster_id" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Stock Unit" column="stock_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Stock Ctn" column="stock_ctn" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+</Schema>

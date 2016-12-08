@@ -1,0 +1,206 @@
+<Schema name="Target">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Calendar">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_calendar" schema="public">
+      </Table>
+      <Level name="Years" visible="true" column="year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Month(mmm)" visible="true" column="month_mm_mmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Week of the Month" visible="true" column="week_of_the_year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="date" visible="true" column="date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Customized Calendar" visible="true" hasAll="true">
+      <Table name="tbld_calendar" schema="public">
+      </Table>
+      <Level name="Year" visible="true" column="year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Week of the year" visible="true" column="week_of_the_month" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Date" visible="true" column="date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Customized Day" visible="true" hasAll="true">
+      <Table name="tbld_calendar" schema="public">
+      </Table>
+      <Level name="Year" visible="true" column="year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Month(mmm)" visible="true" column="month_mm_mmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Week of the month" visible="true" column="week_of_the_year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Day(ddd)" visible="true" column="day_dd_ddd" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="dAte" visible="false" column="date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Bussiness Geo">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_distribution_house" schema="public">
+      </Table>
+      <Level name="Business Channel Type" visible="true" column="biz_channel_type" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Region" visible="true" column="region" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="RSM" visible="true" column="rsm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Area" visible="true" column="area" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="ASM" visible="true" column="asm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Territory" visible="true" column="territory" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Territory Officer" visible="true" column="territory_officer" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Distribution Name" visible="true" column="dbh_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Distribution Code" visible="true" column="dbh_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Distributor Name" visible="true" column="distributor_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Stock Distributor Name" visible="true" column="stock_dbh_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Category" visible="true" column="db_category" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Credit Category" visible="true" column="credit_category" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Dbh id" visible="false" column="dbh_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Product">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_sku" schema="public">
+      </Table>
+      <Level name="Brand" visible="true" column="brand" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku Macro Group" visible="true" column="sku_macro_group_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku Group" visible="true" column="sku_group_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku" visible="true" column="sku_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku Code" visible="true" column="sku_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Category" visible="true" column="category" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Ctn Size" visible="true" column="ctn_size" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Tally Code" visible="true" column="tally_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price MRP B2B" visible="true" column="unit_price_mrp_b2b" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Sales B2B" visible="true" column="unit_price_sales_b2b" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Lifting B2B" visible="true" column="unit_price_lifting_b2b" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price MRP GT" visible="true" column="unit_price_mrp_gt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price MRP MT" visible="true" column="unit_price_mrp_mt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Sales GT" visible="true" column="unit_price_sales_gt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Sales MT" visible="true" column="unit_price_sales_mt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Lifting MT" visible="true" column="unit_price_lifting_mt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Lifting GT" visible="true" column="unit_price_lifting_gt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku id" visible="true" column="sku_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="Daily Target Sales DBH SKU wise" visible="true" cache="true" enabled="true">
+    <Table name="tagg_daily_target" schema="public">
+    </Table>
+    <DimensionUsage source="Calendar" name="Calendar" visible="true" foreignKey="date" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Product" name="Product" visible="true" foreignKey="sku_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Bussiness Geo" name="Business Geo" visible="true" foreignKey="dbh_id" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Daily Target Volume" column="daily_target_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Daily Target Unit" column="daily_target_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Daily Target CTN" column="daily_target_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Daily Target Amount " column="daily_target_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Target Volume" column="monthly_target_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Target Unit" column="monthly_target_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Target CTN" column="monthly_target_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Target Amount" column="monthly_target_amount" aggregator="sum" visible="true">
+    </Measure>
+    <CalculatedMember name="Daily Target MT" formula="[Measures].[Daily Target Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Monthly Target in MT" formula="[Measures].[Monthly Target Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="Monthly Target Sales" visible="true" cache="true" enabled="true">
+    <Table name="tagg_monthly_target" schema="public">
+    </Table>
+    <DimensionUsage source="Product" name="Product" visible="true" foreignKey="sku_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Bussiness Geo" name="Business Geo" visible="true" foreignKey="dbh_id" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" foreignKey="month_id" highCardinality="false" name="Calendar">
+      <Hierarchy visible="true" hasAll="true">
+        <Table name="tbld_calendar_month" schema="public">
+        </Table>
+        <Level name="Years" visible="true" column="year_yyy" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Months" visible="true" column="month_mm_mmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Start Date" visible="true" column="start_date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="End Date" visible="true" column="end_date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Month id" visible="false" column="month_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="Target Volume" column="target_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Target Unit" column="target_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Target Ctn" column="target_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Target Amount" column="target_amount" aggregator="sum" visible="true">
+    </Measure>
+    <CalculatedMember name="Target in MT" formula="[Measures].[Target Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="Daily PR Target Sales DBH SKU wise" visible="false" cache="true" enabled="true">
+    <Table name="tagg_daily_pr_target" schema="public">
+    </Table>
+    <DimensionUsage source="Calendar" name="Calendar" visible="true" foreignKey="date" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Bussiness Geo" name="Business Geo" visible="true" foreignKey="dbh_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Product" name="Product" visible="true" foreignKey="sku_id" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Daily PR Target Volume" column="daily_pr_target_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Daily PR Target Unit" column="daily_pr_target_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Daily PR Target CTN" column="daily_pr_target_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Daily PR Target Amount" column="daily_pr_target_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly PR Target Volume" column="monthly_pr_target_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly PR Target Unit" column="monthly_pr_target_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly PR Target CTN" column="monthly_pr_target_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly PR Target Amount" column="monthly_pr_target_amount" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+</Schema>

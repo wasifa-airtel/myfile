@@ -1,0 +1,296 @@
+<Schema name="Primary">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Calendar">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_calendar" schema="public">
+      </Table>
+      <Level name="Years" visible="true" column="year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Months(mmm)" visible="true" table="tbld_calendar" column="month_mm_mmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Month(mmmm)" visible="true" column="month_mm_mmmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Week of the Month" visible="true" column="week_of_the_year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Date" visible="true" column="date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Customized Calendar" visible="true" hasAll="true">
+      <Table name="tbld_calendar" schema="public">
+      </Table>
+      <Level name="Year" visible="true" column="year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Week of the Year" visible="true" column="week_of_the_month" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Date" visible="true" column="date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Customized Calendar Day" visible="true" hasAll="true">
+      <Table name="tbld_calendar" schema="public" alias="">
+      </Table>
+      <Level name="Year" visible="true" column="year_yy" uniqueMembers="false">
+      </Level>
+      <Level name="Month(mmm)" visible="true" column="month_mm_mmm" uniqueMembers="false">
+      </Level>
+      <Level name="Month(mmmm)" visible="true" column="month_mm_mmmm" uniqueMembers="false">
+      </Level>
+      <Level name="Day(ddd)" visible="true" column="day_dd_ddd" uniqueMembers="false">
+      </Level>
+      <Level name="Day(dddd)" visible="true" column="day_dd_dddd" uniqueMembers="false">
+      </Level>
+      <Level name="Date" visible="false" column="date" uniqueMembers="false">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Business Geo">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_distribution_house" schema="public">
+      </Table>
+      <Level name="Business Channel" visible="true" column="biz_channel_type" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Region" visible="true" column="region" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="RSM" visible="true" column="rsm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Area" visible="true" column="area" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="ASM" visible="true" column="asm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Territory" visible="true" column="territory" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Territory Officer" visible="true" column="territory_officer" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Distribution" visible="true" column="dbh_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Distributor name" visible="true" column="distributor_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Stock Distribution" visible="true" column="stock_dbh_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Distributor Code" visible="true" column="dbh_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Distribution Category" visible="true" column="db_category" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Credit Category" visible="true" column="credit_category" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Distributor id" visible="false" column="dbh_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Product">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_sku" schema="public">
+      </Table>
+      <Level name="Brand " visible="true" column="brand" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku Macro" visible="true" column="sku_macro_group_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku Group" visible="true" column="sku_group_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku" visible="true" column="sku_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku Code" visible="true" column="sku_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Ctn Size" visible="true" column="ctn_size" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Tally Code" visible="true" column="tally_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Category" visible="true" column="category" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price MRP B2B" visible="true" column="unit_price_mrp_b2b" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price MRP GT" visible="true" column="unit_price_mrp_gt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price MRP MT" visible="true" column="unit_price_mrp_mt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Sales B2B" visible="true" column="unit_price_sales_b2b" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Sales GT" visible="true" column="unit_price_sales_gt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Sales MT" visible="true" column="unit_price_sales_mt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Lifting GT" visible="true" column="unit_price_lifting_gt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Lifting B2B" visible="true" column="unit_price_lifting_b2b" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Lifting MT" visible="true" column="unit_price_lifting_mt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku id" visible="false" column="sku_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="Pr Daily Sales" visible="true" cache="true" enabled="true">
+    <Table name="tagg_daily_pr_sales" schema="public">
+    </Table>
+    <DimensionUsage source="Calendar" name="Calendar" visible="true" foreignKey="date" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Business Geo" name="Business Geo" visible="true" foreignKey="dbh_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Product" name="Product" visible="true" foreignKey="sku_id" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Pr Sales Volume" column="pr_sales_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Pr Sales Unit" column="pr_sales_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Pr Sales Ctn" column="pr_sales_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Pr Sales Amount" column="pr_sales_amount" aggregator="sum" visible="true">
+    </Measure>
+    <CalculatedMember name="Pr Sales MT" formula="[Measures].[Pr Sales Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="Pr Sales LMTD" visible="false" cache="true" enabled="true">
+    <Table name="tagg_daily_pr_sales_lmtd" schema="public">
+    </Table>
+    <DimensionUsage source="Calendar" name="Calendar" visible="true" foreignKey="date" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Business Geo" name="Business Geo" visible="true" foreignKey="dbh_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Product" name="Product" visible="true" foreignKey="sku_id" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Primary LMTD Volume" column="pr_sales_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Primary LMTD Unit" column="pr_sales_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Primary LMTD Ctn" column="pr_sales_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Primary LMTD Amount" column="pr_sales_amount" aggregator="sum" visible="true">
+    </Measure>
+    <CalculatedMember name="Primary LMTD MT" formula="[Measures].[Primary LMTD Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="Pr Sales LYMTD" visible="false" cache="true" enabled="true">
+    <Table name="tagg_daily_pr_sales_lymtd" schema="public">
+    </Table>
+    <DimensionUsage source="Calendar" name="Calendar" visible="true" foreignKey="date" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Business Geo" name="Business Geo" visible="true" foreignKey="dbh_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Product" name="Product" visible="true" foreignKey="sku_id" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Pr LYMTD Volume" column="pr_sales_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Pr LYMTD Unit" column="pr_sales_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Pr LYMTD Ctn" column="pr_sales_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Pr LYMTD Amount" column="pr_sales_volume" aggregator="sum" visible="true">
+    </Measure>
+    <CalculatedMember name="Pr LYMTD MT" formula="[Measures].[Pr LYMTD Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="Daily Primary Lifting " visible="true" cache="true" enabled="true">
+    <Table name="tagg_primary_daily_lifting" schema="public">
+    </Table>
+    <DimensionUsage source="Calendar" name="Calendar" visible="true" foreignKey="date" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Business Geo" name="Business Geo" visible="true" foreignKey="dbh_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Product" name="Product" visible="true" foreignKey="sku_id" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" foreignKey="batch_date" highCardinality="false" name="Batch Calendar">
+      <Hierarchy visible="true" hasAll="true">
+        <Table name="vw_tbld_calendar_batch" schema="public">
+        </Table>
+        <Level name="Years" visible="true" column="year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Month(mmm)" visible="true" column="month_mm_mmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Month(mmmm)" visible="true" column="month_mm_mmmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Week of the Month" visible="true" column="week_of_the_year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Day(ddd)" visible="true" column="day_dd_ddd" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Day(dddd)" visible="true" column="day_dd_dddd" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Date" visible="true" column="date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="PR Free Lifting Volume" column="pr_free_lifting_volume" aggregator="distinct-count" visible="false">
+    </Measure>
+    <Measure name="PR Free Lifting Unit" column="pr_free_lifting_unit" aggregator="sum" visible="false">
+    </Measure>
+    <Measure name="PR Free Lifting Ctn" column="pr_free_lifting_ctn" aggregator="sum" visible="false">
+    </Measure>
+    <Measure name="PR Free Lifting Amount" column="pr_free_lifting_amount" aggregator="sum" visible="false">
+    </Measure>
+    <Measure name="PR Lifting Volume" column="pr_lifting_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="PR Lifting Unit" column="pr_lifting_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="PR Lifting Ctn" column="pr_lifting_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="PR Lifting Amount" column="pr_lifting_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Pr Replacement Lifting Volume" column="pr_replacement_lifting_volume" aggregator="sum" visible="false">
+    </Measure>
+    <Measure name="Pr Replacement Lifting Unit" column="pr_replacement_lifting_unit" aggregator="sum" visible="false">
+    </Measure>
+    <Measure name="Pr Replacement Lifting Ctn" column="pr_replacement_lifting_ctn" aggregator="sum" visible="false">
+    </Measure>
+    <Measure name="Pr Replacement Lifting Amount" column="pr_replacement_lifting_amount" aggregator="sum" visible="false">
+    </Measure>
+    <CalculatedMember name="PR Lifting Volume(MT)" formula="[Measures].[PR Lifting Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <VirtualCube enabled="true" name="Pr Sales Detail" visible="true">
+    <VirtualCubeDimension visible="true" foreignKey="date" highCardinality="false" name="Calendar">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" foreignKey="sku_id" highCardinality="false" name="Product">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" foreignKey="dbh_id" highCardinality="false" name="Business Geo">
+    </VirtualCubeDimension>
+    <VirtualCubeMeasure cubeName="Pr Daily Sales" name="[Measures].[Pr Sales Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Pr Daily Sales" name="[Measures].[Pr Sales Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Pr Daily Sales" name="[Measures].[Pr Sales Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Pr Daily Sales" name="[Measures].[Pr Sales Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Pr Sales LMTD" name="[Measures].[Primary LMTD Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Pr Sales LMTD" name="[Measures].[Primary LMTD Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Pr Sales LMTD" name="[Measures].[Primary LMTD Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Pr Sales LMTD" name="[Measures].[Primary LMTD Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Pr Sales LYMTD" name="[Measures].[Pr LYMTD Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Pr Sales LYMTD" name="[Measures].[Pr LYMTD Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Pr Sales LYMTD" name="[Measures].[Pr LYMTD Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Pr Sales LYMTD" name="[Measures].[Pr LYMTD Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Pr Sales LMTD" name="[Measures].[Primary LMTD MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Pr Sales LYMTD" name="[Measures].[Pr LYMTD MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Pr Daily Sales" name="[Measures].[Pr Sales MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily Primary Lifting " name="[Measures].[PR Lifting Volume(MT)]" visible="true">
+    </VirtualCubeMeasure>
+    <CalculatedMember name="PR Sales Volume LMTD GR " formatString="#.##%" formula="([Measures].[Pr Sales Volume]-[Measures].[Primary LMTD Volume])/[Measures].[Primary LMTD Volume]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="PR Sales Unit LMTD GR " formatString="#.##%" formula="([Measures].[Pr Sales Unit]-[Measures].[Primary LMTD Unit])/[Measures].[Primary LMTD Unit]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="PR Sales CTN LMTD GR " formatString="#.##%" formula="([Measures].[Pr Sales Ctn]-[Measures].[Primary LMTD Ctn])/[Measures].[Primary LMTD Ctn]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="PR Sales Amount LMTD GR " formatString="#.##%" formula="([Measures].[Pr Sales Amount]-[Measures].[Primary LMTD Amount])/[Measures].[Primary LMTD Amount]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="PR Sales Volume LYMTD GR " formatString="#.##%" formula="([Measures].[Pr Sales Volume]-[Measures].[Pr LYMTD Volume])/[Measures].[Measures].[Pr LYMTD Volume]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="PR Sales Unit LYMTD GR " formatString="#.##%" formula="([Measures].[Pr Sales Unit]-[Measures].[Pr LYMTD Unit])/[Measures].[Measures].[Pr LYMTD Unit]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="PR Sales CTN LYMTD GR " formatString="#.##%" formula="([Measures].[Pr Sales Ctn]-[Measures].[Pr LYMTD Ctn])/[Measures].[Measures].[Pr LYMTD Ctn]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="PR Sales Amount LYMTD GR " formatString="#.##%" formula="([Measures].[Pr Sales Amount]-[Measures].[Pr LYMTD Amount])/[Measures].[Measures].[Pr LYMTD Amount]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Primary LMTD Volume (MT) GR" formula="([Measures].[Pr Sales MT]-[Measures].[Primary LMTD MT])/[Measures].[Primary LMTD MT]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Primary LYMTD Volume (MT)  GR" formula="([Measures].[Pr Sales MT]-[Measures].[Pr LYMTD MT])/[Measures].[Pr LYMTD MT]" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </VirtualCube>
+</Schema>

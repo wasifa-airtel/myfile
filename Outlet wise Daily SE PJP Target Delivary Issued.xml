@@ -1,0 +1,1030 @@
+<Schema name="Outlet SE">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Calendar">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_calendar" schema="public">
+      </Table>
+      <Level name="Years" visible="true" column="year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Month(mmm)" visible="true" column="month_mm_mmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Month(mmmm)" visible="true" column="month_mm_mmmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Week of the month" visible="true" column="week_of_the_year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sales Date" visible="true" column="date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Customized Calendar" visible="true" hasAll="true">
+      <Table name="tbld_calendar" schema="public">
+      </Table>
+      <Level name="Year" visible="true" column="year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Month of the Year" visible="true" column="week_of_the_month" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sales Date" visible="true" column="date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Customized Calendar Day" visible="true" hasAll="true">
+      <Table name="tbld_calendar" schema="public">
+      </Table>
+      <Level name="Year" visible="true" column="year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Month(mmm)" visible="true" column="month_mm_mmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Month(mmmm)" visible="true" column="month_mm_mmmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Day(ddd)" visible="true" column="day_dd_ddd" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Day(dddd)" visible="true" column="day_dd_dddd" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Date" visible="false" column="date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Business Geo">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_distribution_house" schema="public">
+      </Table>
+      <Level name="Business Channel" visible="true" column="biz_channel_type" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Region" visible="true" column="region" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="RSM" visible="true" column="rsm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Area" visible="true" column="area" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="ASM" visible="true" column="asm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Territory" visible="true" column="territory" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Territory Officer" visible="true" column="territory_officer" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Distribution House" visible="true" column="dbh_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Distribution Code" visible="true" column="dbh_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Distributor Name" visible="true" column="distributor_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Stock Distribution Name" visible="true" column="stock_dbh_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Distribution Category" visible="true" column="db_category" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Credit Limit Category" visible="true" column="credit_category" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Dbh id" visible="false" column="dbh_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Product">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_sku" schema="public">
+      </Table>
+      <Level name="Brand" visible="true" column="brand" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku Macro Group" visible="true" column="sku_macro_group_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku Group " visible="true" column="sku_group_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku Name" visible="true" column="sku_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku Code" visible="true" column="sku_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Category" visible="true" column="category" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Tally Code" visible="true" column="tally_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price MRP B2B" visible="true" column="unit_price_mrp_b2b" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Sales B2B" visible="true" column="unit_price_sales_b2b" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Lifting B2B" visible="true" column="unit_price_lifting_b2b" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price MRP GT" visible="true" column="unit_price_mrp_gt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Sales GT" visible="true" column="unit_price_sales_gt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Lifting GT" visible="true" column="unit_price_lifting_gt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price MRP MT" visible="true" column="unit_price_mrp_mt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Sales MT" visible="true" column="unit_price_sales_mt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Unit Price Lifting MT" visible="true" column="unit_price_lifting_mt" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Ctn Size" visible="true" column="ctn_size" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Sku id" visible="true" column="sku_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Sales Representative">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_sr" schema="public">
+      </Table>
+      <Level name="SR " visible="true" column="sr_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="SR Code" visible="true" column="sr_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="SR Type" visible="true" column="sr_type" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="SR id" visible="false" column="sr_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Route">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_route" schema="public">
+      </Table>
+      <Level name="Route" visible="true" column="route_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Route Code" visible="true" column="route_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Route id" visible="false" column="route_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Section">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_section" schema="public">
+      </Table>
+      <Level name="Section " visible="true" column="section_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Section Code" visible="true" column="section_class" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Section Type" visible="true" column="section_type" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Section Class" visible="true" column="section_class" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Section id" visible="false" column="section_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Cluster">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_cluster" schema="public">
+      </Table>
+      <Level name="Cluster" visible="true" column="cluster_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Cluster Code" visible="true" column="cluster_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Cluster id" visible="false" column="cluster_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Outlet">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_outlet" schema="public">
+      </Table>
+      <Level name="Outlet" visible="true" column="outlet_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Outlet Code" visible="true" column="outlet_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Outlet Category" visible="true" column="outlet_category" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Volume Class" visible="true" column="volume_class" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Address" visible="true" column="address" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Outlet id" visible="false" column="outlet_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Displayed">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_displayed" schema="public">
+      </Table>
+      <Level name="Displayed" visible="true" column="name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="id" visible="false" column="id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Credit">
+    <Hierarchy visible="true" hasAll="true">
+      <Table name="tbld_credit" schema="public">
+      </Table>
+      <Level name="Credit" visible="true" column="name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="id" visible="false" column="id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="Outlet Daily SE" visible="true" cache="true" enabled="true">
+    <Table name="tagg_outlet_daily_sales" schema="public">
+    </Table>
+    <DimensionUsage source="Calendar" name="Calendar" visible="true" foreignKey="date" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Business Geo" name="Business Geo" visible="true" foreignKey="dbh_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Product" name="Product" visible="true" foreignKey="sku_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Sales Representative" name="Sales Representative" visible="true" foreignKey="sr_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Route" name="Route" visible="true" foreignKey="route_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Section" name="Section" visible="true" foreignKey="section_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Cluster" name="Cluster" visible="true" foreignKey="cluster_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Outlet" name="Outlet" visible="true" foreignKey="outlet_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Credit" name="Credit" visible="true" foreignKey="credit_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Displayed" name="Displayed" visible="true" foreignKey="displayed_id" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Net SE Volume" column="se_net_sales_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Net SE Unit" column="se_net_sales_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Net SE Ctn" column="se_net_sales_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Net Se Amount" column="se_net_sales_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Free SE Volume" column="se_free_sales_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Free SE Unit" column="se_free_sales_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Free SE Ctn" column="se_free_sales_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Free SE Amount" column="se_free_sales_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Gross SE Volume" column="se_gross_sales_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Gross SE Unit" column="se_gross_sales_unit" aggregator="distinct-count" visible="true">
+    </Measure>
+    <Measure name="Gross SE Ctn" column="se_gross_sales_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Gross SE Amount" column="se_gross_sales_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="No of Outlet Credit" column="credit_id" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="No of Outlet  Displayed" column="displayed_id" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Credit Amount" column="credit_amount" aggregator="sum" visible="true">
+    </Measure>
+    <CalculatedMember name="Net SE Volume%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Net SE Volume])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Net SE Volume])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Net SE Volume])-([Calendar].PrevMember,Measures.[Net SE Volume]))/([Calendar].PrevMember,Measures.[Net SE Volume]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Net SE Unit%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Net SE Unit])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Net SE Unit])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Net SE Unit])-([Calendar].PrevMember,Measures.[Net SE Unit]))/([Calendar].PrevMember,Measures.[Net SE Unit]))" dimension="Measures" visible="false">
+    </CalculatedMember>
+    <CalculatedMember name="Net SE Ctn%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Net SE Ctn])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Net SE Ctn])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Net SE Ctn])-([Calendar].PrevMember,Measures.[Net SE Ctn]))/([Calendar].PrevMember,Measures.[Net SE Ctn]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Net SE Amount%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Net SE Amount])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Net SE Amount])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Net SE Amount])-([Calendar].PrevMember,Measures.[Net SE Amount]))/([Calendar].PrevMember,Measures.[Net SE Amount]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Free SE Volume%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Free SE Volume])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Free SE Volume])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Free SE Volume])-([Calendar].PrevMember,Measures.[Free SE Volume]))/([Calendar].PrevMember,Measures.[Free SE Volume]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Free SE Unit%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Free SE Unit])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Free SE Unit])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Free SE Unit])-([Calendar].PrevMember,Measures.[Free SE Unit]))/([Calendar].PrevMember,Measures.[Free SE Unit]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Free SE Ctn%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Free SE Ctn])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Free SE Ctn])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Free SE Ctn])-([Calendar].PrevMember,Measures.[Free SE Ctn]))/([Calendar].PrevMember,Measures.[Free SE Ctn]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Free SE Amount%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Free SE Amount])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Free SE Amount])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Free SE Amount])-([Calendar].PrevMember,Measures.[Free SE Amount]))/([Calendar].PrevMember,Measures.[Free SE Amount]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Gross SE Volume%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Gross SE Volume])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Gross SE Volume])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Gross SE Volume])-([Calendar].PrevMember,Measures.[Gross SE Volume]))/([Calendar].PrevMember,Measures.[Gross SE Volume])) " dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Gross SE Unit%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Gross SE Unit])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Gross SE Unit])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Gross SE Unit])-([Calendar].PrevMember,Measures.[Gross SE Unit]))/([Calendar].PrevMember,Measures.[Gross SE Unit])) " dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Gross SE Ctn%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Gross SE Ctn])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Gross SE Ctn])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Gross SE Ctn])-([Calendar].PrevMember,Measures.[Gross SE Ctn]))/([Calendar].PrevMember,Measures.[Gross SE Ctn])) " dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Gross SE Amount%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Gross SE Amount])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Gross SE Amount])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Gross SE Amount])-([Calendar].PrevMember,Measures.[Gross SE Amount]))/([Calendar].PrevMember,Measures.[Gross SE Amount])) " dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Gross SE Volume Contribution%" formatString="#.##%" formula="[Measures].[Gross SE Volume]/sum({([Business Geo].[All Business Geos],[Route].[All Routes],[Section].[All Sections],[Cluster].[All Clusters],[Outlet].[All Outlets],[Product].[All Products])},[Measures].[Gross SE Volume])" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Gross SE Amount Contribution%" formatString="#.##%" formula="[Measures].[Gross SE Amount]/sum({([Business Geo].[All Business Geos],[Route].[All Routes],[Section].[All Sections],[Cluster].[All Clusters],[Outlet].[All Outlets],[Product].[All Products])},[Measures].[Gross SE Amount]) [Measures].[Gross SE Amount]/sum({([Business Geo].[All Business Geos],[Route].[All Routes],[Section].[All Sections],[Cluster].[All Clusters],[Outlet].[All Outlets],[Product].[All Products])},[Measures].[Gross SE Amount]) " dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Net SE MT" formula="[Measures].[Net SE Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Gross SE MT" formula="[Measures].[Gross SE Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Free SE MT" formula="[Measures].[Free SE Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Net SE MT%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Net SE MT])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Net SE MT])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Net SE MT])-([Calendar].PrevMember,Measures.[Net SE MT]))/([Calendar].PrevMember,Measures.[Net SE MT]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Gross SE MT%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Gross SE MT])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Gross SE MT])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Gross SE MT])-([Calendar].PrevMember,Measures.[Gross SE MT]))/([Calendar].PrevMember,Measures.[Gross SE MT]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Free SE MT%" formatString="#.##%" formula="Iif(([Calendar].PrevMember,Measures.[Free SE MT])=0 OR  IsEmpty(([Calendar].PrevMember,Measures.[Free SE MT])),0.0,(([Calendar].CURRENTMEMBER,Measures.[Free SE MT])-([Calendar].PrevMember,Measures.[Free SE MT]))/([Calendar].PrevMember,Measures.[Free SE MT]))" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="Outlet Daily Target" visible="true" cache="true" enabled="true">
+    <Table name="tagg_outlet_daily_target" schema="public">
+    </Table>
+    <DimensionUsage source="Calendar" name="Calendar" visible="true" foreignKey="date" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Business Geo" name="Business Geo" visible="true" foreignKey="dbh_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Product" name="Product" visible="true" foreignKey="sku_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Sales Representative" name="Sales Representative" visible="true" foreignKey="sr_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Route" name="Route" visible="true" foreignKey="route_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Section" name="Section" visible="true" foreignKey="section_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Cluster" name="Cluster" visible="true" foreignKey="cluster_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Outlet" name="Outlet" visible="true" foreignKey="route_id" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Daily Target Volume" column="daily_target_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Daily Target Unit" column="daily_target_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Daily Target Ctn" column="daily_target_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Daily Target Amount" column="daily_target_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Target Volume" column="monthly_target_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Target Unit" column="monthly_target_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Target Ctn" column="monthly_target_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Monthly Target Amount" column="monthly_target_amount" aggregator="sum" visible="true">
+    </Measure>
+    <CalculatedMember name="Daily Target MT" formula="[Measures].[Daily Target Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Monthly Target MT" formula="[Measures].[Monthly Target Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="Outlet Daily Delivary" visible="true" cache="true" enabled="true">
+    <Table name="tagg_outlet_daily_delivary" schema="public">
+    </Table>
+    <DimensionUsage source="Calendar" name="Calendar" visible="true" foreignKey="sales_date" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" foreignKey="delivary_date" highCardinality="false" name="Delivary Date">
+      <Hierarchy visible="true" hasAll="true">
+        <Table name="vw_tbld_calendar_view" schema="public">
+        </Table>
+        <Level name="Years" visible="true" column="year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Month(mmm)" visible="true" column="month_mm_mmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Month(mmmm)" visible="true" column="month_mm_mmmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Week of the month" visible="true" column="week_of_the_year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Date" visible="true" column="date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="Customized Calendar" visible="true" hasAll="true">
+        <Table name="vw_tbld_calendar_view" schema="public">
+        </Table>
+        <Level name="Year" visible="true" column="year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Week of the Year" visible="true" column="week_of_the_month" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Date" visible="true" column="date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="Customized Calendar Day" visible="true" hasAll="true">
+        <Table name="vw_tbld_calendar_view" schema="public">
+        </Table>
+        <Level name="Year" visible="true" column="year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Month(mmm)" visible="true" column="month_mm_mmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Month(mmmm)" visible="true" column="month_mm_mmmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Day(ddd)" visible="true" column="day_dd_ddd" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Day(dddd)" visible="true" column="day_dd_dddd" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Date" visible="true" column="date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <DimensionUsage source="Business Geo" name="Business Geo" visible="true" foreignKey="dbh_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Product" name="Product" visible="true" foreignKey="sku_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Sales Representative" name="Sales Representative" visible="true" foreignKey="sr_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Route" name="Route" visible="true" foreignKey="route_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Section" name="Section" visible="true" foreignKey="section_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Cluster" name="Cluster" visible="true" foreignKey="cluster_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Outlet" name="Outlet" visible="true" foreignKey="outlet_id" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Net Delivary Volume" column="net_delivary_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Net Delivary Unit" column="net_delivary_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Net Delivary Ctn" column="net_delivary_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Net Delivary Amount" column="net_delivary_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Free Delivary Volume" column="free_delivary_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Free Delivary Unit" column="free_delivary_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Free Delivary Ctn" column="free_delivary_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Free Delivary Amount" column="free_delivary_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Gross Delivary Volume" column="gross_delivary_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Gross Delivary Unit" column="gross_delivary_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Gross Delivary Ctn" column="gross_delivary_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Gross Delivary Amount" column="gross_delivary_amount" aggregator="sum" visible="true">
+    </Measure>
+    <CalculatedMember name="Net Delivary MT" formula="[Measures].[Net Delivary Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Free Delivary MT" formula="[Measures].[Free Delivary Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Gross Delivary MT" formula="[Measures].[Gross Delivary Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="Outlet Daily Issued Delivary" visible="true" cache="true" enabled="true">
+    <Table name="tagg_outlet_daily_issued_delivary" schema="public">
+    </Table>
+    <DimensionUsage source="Calendar" name="Calendar" visible="true" foreignKey="sales_date" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" foreignKey="delivary_date" highCardinality="false" name="Delivary Issued Date">
+      <Hierarchy visible="true" hasAll="true">
+        <Table name="vw_tbld_calendar_view" schema="public">
+        </Table>
+        <Level name="Years" visible="true" column="year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Month(mmm)" visible="true" column="month_mm_mmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Month(mmmm)" visible="true" column="month_mm_mmmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Week of the month" visible="true" column="week_of_the_year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Date" visible="true" column="date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="Customized Calendar Day" visible="true" hasAll="true">
+        <Table name="vw_tbld_calendar_view" schema="public">
+        </Table>
+        <Level name="Year" visible="true" column="year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Month(mmm)" visible="true" column="month_mm_mmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Month(mmmm)" visible="true" column="month_mm_mmmm" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Day(ddd)" visible="true" column="day_dd_ddd" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Day(dddd)" visible="true" column="day_dd_dddd" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Date" visible="false" column="date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="Customized Calendar " visible="true" hasAll="true">
+        <Table name="vw_tbld_calendar_view" schema="public">
+        </Table>
+        <Level name="Year" visible="true" column="year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Week of the Year" visible="true" column="week_of_the_month" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Date" visible="true" column="date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <DimensionUsage source="Business Geo" name="Business Geo" visible="true" foreignKey="dbh_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Product" name="Product" visible="true" foreignKey="sku_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Sales Representative" name="Sales Representative" visible="true" foreignKey="sr_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Route" name="Route" visible="true" foreignKey="route_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Section" name="Section" visible="true" foreignKey="section_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Cluster" name="Cluster" visible="true" foreignKey="cluster_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Outlet" name="Outlet" visible="true" foreignKey="outlet_id" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Net Issue Delivary Volume" column="net_issue_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Net Issue Delivary Unit" column="net_issue_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Net Issue Delivary Ctn" column="gross_issue_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Net Issue Delivary Amount" column="net_issue_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Free Issue Delivary Volume" column="free_issue_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Free Issue Delivary Unit" column="free_issue_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Free Issue Delivary Ctn" column="free_issue_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Free Issue Delivary Amount" column="free_issue_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Gross Issue Delivary Volume" column="gross_issue_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Gross Issue Delivary Unit" column="gross_issue_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Gross Issue Delivary Ctn" column="gross_issue_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Gross Issue Delivary Amount" column="gross_issue_amount" aggregator="sum" visible="true">
+    </Measure>
+    <CalculatedMember name="Net Issue Delivary MT" formula="[Measures].[Net Issue Delivary Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Free Issue Delivary MT" formula="[Measures].[Free Issue Delivary Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Gross Issue Delivary MT" formula="[Measures].[Gross Issue Delivary Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="SR PJP Visit  Summary" visible="true" cache="true" enabled="true">
+    <Table name="tagg_sr_pjp_visit_sum" schema="public">
+    </Table>
+    <DimensionUsage source="Calendar" name="Calendar" visible="true" foreignKey="date" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Business Geo" name="Business Geo" visible="true" foreignKey="dbh_id" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" foreignKey="outlet_visit_status_id" highCardinality="false" name="Outlet Visit Status">
+      <Hierarchy visible="true" hasAll="true">
+        <Table name="tbld_visit_status" schema="public">
+        </Table>
+        <Level name="Visit Status" visible="true" column="visit_status" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Visit Status Code" visible="true" column="visit_code" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Visit Status id" visible="false" column="visit_status_id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <DimensionUsage source="Sales Representative" name="Sales Representative" visible="true" foreignKey="sr_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Route" name="Route" visible="true" foreignKey="route_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Section" name="Section" visible="true" foreignKey="section_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Cluster" name="Cluster" visible="true" foreignKey="cluster_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Outlet" name="Outlet" visible="true" foreignKey="outlet_id" highCardinality="false">
+    </DimensionUsage>
+    <Dimension type="StandardDimension" visible="true" foreignKey="geo_id" highCardinality="false" name="Geo Position">
+      <Hierarchy visible="true" hasAll="true">
+        <Table name="tbld_geo_position_type" schema="public">
+        </Table>
+        <Level name="Geo Position Name" visible="true" column="name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="id" visible="false" column="id" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="No of PJP Outlet" column="counter" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Net PJP SE Volume" column="se_net_sales_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Net PJP SE Unit" column="se_net_sales_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Net PJP SE Ctn" column="se_net_sales_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Net PJP SE Amount" column="se_net_sales_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Free PJP SE Volume" column="se_free_sales_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Free PJP SE Unit" column="se_free_sales_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Free PJP SE Ctn" column="se_free_sales_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Free PJP SE Amount" column="se_free_sales_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Gross PJP SE Volume" column="se_gross_sales_volume" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Gross PJP SE Unit" column="se_gross_sales_unit" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Gross PJP SE Ctn" column="se_gross_sales_ctn" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Gross PJP SE Amount" column="se_gross_sales_amount" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Total Order Line" column="total_order_line" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Order Time" column="start_time" datatype="String" aggregator="min" visible="true">
+    </Measure>
+    <Measure name="End Time" column="end_time" datatype="String" aggregator="max" visible="true">
+    </Measure>
+    <Measure name="Order Hour" column="start_hour" datatype="String" aggregator="min" visible="false">
+    </Measure>
+    <Measure name="End Hour" column="end_hour" aggregator="max" visible="false">
+    </Measure>
+    <Measure name="No of Order" aggregator="sum" visible="true">
+      <MeasureExpression>
+        <SQL dialect="generic">
+          <![CDATA[case when outlet_visit_status_id= 4 then 1 else 0 end]]>
+        </SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure name="No of Visited Outlet" aggregator="sum" visible="true">
+      <MeasureExpression>
+        <SQL dialect="generic">
+          <![CDATA[case when outlet_visit_status_id=1  then 1 else 0 end]]>
+        </SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure name="Visited but no Order" aggregator="sum" visible="true">
+      <MeasureExpression>
+        <SQL dialect="generic">
+          <![CDATA[case when outlet_visit_status_id=2  then 1 else 0 end]]>
+        </SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure name="Not Visited" aggregator="sum" visible="true">
+      <MeasureExpression>
+        <SQL dialect="generic">
+          <![CDATA[case when outlet_visit_status_id=3  then 1 else 0 end]]>
+        </SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure name="Total Route" column="route_id" aggregator="distinct-count" visible="true">
+    </Measure>
+    <Measure name="Order At Zero Location" aggregator="sum" visible="true">
+      <MeasureExpression>
+        <SQL dialect="generic">
+          <![CDATA[case when outlet_visit_status_id=3  and geo_id = 0  then 1 else 0 end]]>
+        </SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure name="Order At Immediate Location" aggregator="sum" visible="true">
+      <MeasureExpression>
+        <SQL dialect="generic">
+          <![CDATA[case when outlet_visit_status_id=3  and geo_id = 1  then 1 else 0 end]]>
+        </SQL>
+      </MeasureExpression>
+    </Measure>
+    <CalculatedMember name="Line per Sales Call" formatString="#.##" formula="[Measures].[Total Order Line]/[Measures].[No of PJP Outlet]" dimension="Measures" visible="true">
+      <CalculatedMemberProperty name="FORMAT_STRING" expression="prettyIntervalFormatter([Measures].CurrentMember)">
+      </CalculatedMemberProperty>
+    </CalculatedMember>
+    <CalculatedMember name="Time Spent Hour" formula="[Measures].[End Hour]-[Measures].[Order Hour]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Outlet Call Rate" formatString="#.##" formula="[Measures].[No of Order]/[Measures].[No of PJP Outlet]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Outlet completion rate" formatString="#.##" formula="[Measures].[No of Visited Outlet]/[Measures].[No of PJP Outlet]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Net PJP SE MT" formula="[Measures].[Net PJP SE Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Free PJP SE MT" formula="[Measures].[Free PJP SE Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Gross PJP SE MT" formula="[Measures].[Gross PJP SE Volume]/1000" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </Cube>
+  <Cube name="Daily OCR Target" visible="true" cache="true" enabled="true">
+    <Table name="tagg_daily_ocr_target" schema="public">
+    </Table>
+    <DimensionUsage source="Calendar" name="Calendar" visible="true" foreignKey="date" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Business Geo" name="Business Geo" visible="true" foreignKey="dbh_id" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Sales Representative" name="Sales Representative" visible="true" foreignKey="sr_id" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="OCR Target" column="ocr_target" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+  <VirtualCube enabled="true" name="Outlet Detail" visible="true">
+    <VirtualCubeDimension visible="true" foreignKey="date" highCardinality="false" name="Calendar">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" foreignKey="dbh_id" highCardinality="false" name="Business Geo">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" foreignKey="sku_id" highCardinality="false" name="Product">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" foreignKey="sr_id" highCardinality="false" name="Sales Representative">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" foreignKey="route_id" highCardinality="false" name="Route">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" foreignKey="section_id" highCardinality="false" name="Section">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" foreignKey="cluster_id" highCardinality="false" name="Cluster">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" foreignKey="outlet_id" highCardinality="false" name="Outlet">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension cubeName="Outlet Daily Delivary" visible="true" foreignKey="delivary_date" highCardinality="false" name="Delivary Date">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension cubeName="Outlet Daily Issued Delivary" visible="true" foreignKey="delivary_date" highCardinality="false" name="Delivary Issued Date">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension cubeName="SR PJP Visit  Summary" visible="true" foreignKey="outlet_visit_status_id" highCardinality="false" name="Outlet Visit Status">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension cubeName="SR PJP Visit  Summary" visible="true" foreignKey="geo_id" highCardinality="false" name="Geo Position">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" foreignKey="displayed_id" highCardinality="false" name="Displayed">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" foreignKey="credit_id" highCardinality="false" name="Credit">
+    </VirtualCubeDimension>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Net SE Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Target" name="[Measures].[Daily Target Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Net SE Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Net SE Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Net Se Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Free SE Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Free SE Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Free SE Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Free SE Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Gross SE Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Gross SE Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Gross SE Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Gross SE Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Net SE Volume%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Net SE Unit%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Net SE Ctn%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Net SE Amount%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Free SE Volume%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Free SE Unit%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Free SE Ctn%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Free SE Amount%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Gross SE Volume%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Gross SE Unit%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Gross SE Ctn%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Gross SE Amount%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Target" name="[Measures].[Daily Target Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Target" name="[Measures].[Daily Target Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Target" name="[Measures].[Daily Target Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Target" name="[Measures].[Monthly Target Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Target" name="[Measures].[Monthly Target Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Target" name="[Measures].[Monthly Target Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Target" name="[Measures].[Monthly Target Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Delivary" name="[Measures].[Net Delivary Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Delivary" name="[Measures].[Net Delivary Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Delivary" name="[Measures].[Net Delivary Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Delivary" name="[Measures].[Net Delivary Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Delivary" name="[Measures].[Free Delivary Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Delivary" name="[Measures].[Free Delivary Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Delivary" name="[Measures].[Free Delivary Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Delivary" name="[Measures].[Free Delivary Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Delivary" name="[Measures].[Gross Delivary Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Delivary" name="[Measures].[Gross Delivary Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Delivary" name="[Measures].[Gross Delivary Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Delivary" name="[Measures].[Gross Delivary Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Issued Delivary" name="[Measures].[Net Issue Delivary Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Issued Delivary" name="[Measures].[Net Issue Delivary Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Issued Delivary" name="[Measures].[Net Issue Delivary Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Issued Delivary" name="[Measures].[Net Issue Delivary Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Issued Delivary" name="[Measures].[Free Issue Delivary Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Issued Delivary" name="[Measures].[Free Issue Delivary Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Issued Delivary" name="[Measures].[Free Issue Delivary Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Issued Delivary" name="[Measures].[Free Issue Delivary Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Issued Delivary" name="[Measures].[Gross Issue Delivary Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Issued Delivary" name="[Measures].[Gross Issue Delivary Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Issued Delivary" name="[Measures].[Gross Issue Delivary Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Issued Delivary" name="[Measures].[Gross Issue Delivary Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[No of PJP Outlet]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Net PJP SE Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Net PJP SE Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Net PJP SE Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Net PJP SE Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Free PJP SE Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Free PJP SE Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Free PJP SE Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Free PJP SE Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Gross PJP SE Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Gross PJP SE Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Gross PJP SE Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Gross PJP SE Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Total Order Line]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Order Time]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[End Time]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[No of Order]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[No of Visited Outlet]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Visited but no Order]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Not Visited]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Line per Sales Call]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Time Spent Hour]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Outlet Call Rate]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Outlet completion rate]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Net SE MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Gross SE MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Free SE MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Net SE MT%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Gross SE MT%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Free SE MT%]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Target" name="[Measures].[Daily Target MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Target" name="[Measures].[Monthly Target MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[No of Outlet Credit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[No of Outlet  Displayed]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Issued Delivary" name="[Measures].[Net Issue Delivary MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Issued Delivary" name="[Measures].[Free Issue Delivary MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Issued Delivary" name="[Measures].[Gross Issue Delivary MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Delivary" name="[Measures].[Net Delivary MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Delivary" name="[Measures].[Free Delivary MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Net PJP SE MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Free PJP SE MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Gross PJP SE MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily Delivary" name="[Measures].[Gross Delivary MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Outlet Daily SE" name="[Measures].[Credit Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Total Route]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Order At Zero Location]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Order At Immediate Location]" visible="true">
+    </VirtualCubeMeasure>
+    <CalculatedMember name="Achievement Volume%" formatString="#.##%" formula="[Measures].[Gross SE Volume]/[Measures].[Monthly Target Volume]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Achievement Unit%" formatString="#.#####%" formula="[Measures].[Gross SE Unit]/[Measures].[Monthly Target Unit]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Achievement Ctn %" formatString="#.##%" formula="[Measures].[Gross SE Ctn]/[Measures].[Monthly Target Ctn]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Achievement Amount" formatString="#.##%" formula="[Measures].[Gross SE Amount]/[Measures].[Monthly Target Amount]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Shortage Delivery Volume" formatString="####.##" formula="[Measures].[Gross SE Volume]-[Measures].[Gross Delivary Volume]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Shortage Delivary Unit" formatString="#####" formula="[Measures].[Gross SE Unit]-[Measures].[Gross Delivary Unit]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Shortage Delivary Ctn" formatString="##" formula="[Measures].[Gross SE Ctn]-[Measures].[Gross Delivary Ctn]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Shortage Delivary Amount" formatString="#,###.###" formula="[Measures].[Gross SE Amount]-[Measures].[Gross Delivary Amount]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Achievement MT%" formatString="#.#####%" formula="[Measures].[Gross SE MT]/[Measures].[Monthly Target MT]" dimension="Measures" visible="true">
+    </CalculatedMember>
+    <CalculatedMember name="Shortage Delivery MT" formula="[Measures].[Gross SE MT]-[Measures].[Monthly Target MT]" dimension="Measures" visible="true">
+    </CalculatedMember>
+  </VirtualCube>
+  <VirtualCube enabled="true" name="Daily OCR Performance" visible="true">
+    <VirtualCubeDimension visible="true" foreignKey="date" highCardinality="false" name="Calendar">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" foreignKey="dbh_id" highCardinality="false" name="Business Geo">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension visible="true" foreignKey="sr_id" highCardinality="false" name="Sales Representative">
+    </VirtualCubeDimension>
+    <VirtualCubeDimension cubeName="SR PJP Visit  Summary" visible="true" foreignKey="geo_id" highCardinality="false" name="Geo Position">
+    </VirtualCubeDimension>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[No of PJP Outlet]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[No of Visited Outlet]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Net PJP SE Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Net PJP SE Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Net PJP SE Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Net PJP SE Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Free PJP SE Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Free PJP SE Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Free PJP SE Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Free PJP SE Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Gross PJP SE Volume]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Gross PJP SE Unit]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Gross PJP SE Ctn]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Gross PJP SE Amount]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Total Order Line]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Order Time]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[End Time]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[No of Order]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Visited but no Order]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Not Visited]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Line per Sales Call]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Time Spent Hour]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Outlet Call Rate]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Outlet completion rate]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="Daily OCR Target" name="[Measures].[OCR Target]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Net PJP SE MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Free PJP SE MT]" visible="true">
+    </VirtualCubeMeasure>
+    <VirtualCubeMeasure cubeName="SR PJP Visit  Summary" name="[Measures].[Gross PJP SE MT]" visible="true">
+    </VirtualCubeMeasure>
+  </VirtualCube>
+  <UserDefinedFunction name="prettyIntervalFormatter">
+    <Script language="JavaScript">
+      <![CDATA[function getParameterTypes() {
+            return new Array(new mondrian.olap.type.NumericType());
+        }
+        function getReturnType(parameterTypes) {
+            return new mondrian.olap.type.StringType();
+        }
+        function execute(evaluator, arguments) {
+            var value = arguments[0].evaluateScalar(evaluator);
+            var result_string = '';
+            // access Mondrian value
+            var sec =  value;
+            var hours = Math.floor(sec/(60*60));
+            var minutes = Math.floor((sec/60) -(hours*60));
+            var seconds = Math.floor(sec - (hours*60*60) - (minutes*60));
+            if(hours !== 0){
+                    result_string = hours.toString() + 'h ' + minutes.toString() + 'min ' + seconds.toString() + 'sec';
+            } else if(minutes !== 0){
+                    result_string = minutes.toString() + 'min ' + seconds.toString() + 'sec';
+            } else if(seconds !== 0){
+                    result_string = seconds.toString() + 'sec';
+            } else {
+                    // always provide a display value - do not return null
+                    result_string = '0sec';
+            }
+            return "\"" + result_string + "\"";
+        }]]>
+    </Script>
+  </UserDefinedFunction>
+</Schema>
